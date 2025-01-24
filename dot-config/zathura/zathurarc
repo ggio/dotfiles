@@ -1,0 +1,25 @@
+# Synctex
+
+set synctex true
+set synctex-editor-command "nvim --remote-silent +%{line} %{input}"
+
+# Basic Settings
+
+set zoom-center "true"
+set selection-clipboard clipboard
+set render-loading "false"
+set window-width 1280
+set window-height 1080
+set adjust-open "best-fit"
+
+# Set backend to avoid errors
+set database "sqlite"
+
+# Remaping
+
+map <Space> toggle_index
+map w recolor
+
+# Theme
+
+include themes/gruvbox-light
