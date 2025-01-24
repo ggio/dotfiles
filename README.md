@@ -2,7 +2,7 @@ Central repository for my config files.
 
 # Installation and Usage
 
-Using it with stow is straightforward.
+Using it with [stow](https://www.gnu.org/software/stow/) is straightforward.
 
 
 ``` Bash
