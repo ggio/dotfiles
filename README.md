@@ -26,9 +26,9 @@ Some added features, plugins and tweaks:
 # Zathura
 
 Based on [benbrastmckie/.config](https://github.com/benbrastmckie/.config)
-`zaturarc` but made it modular, splitting the color themes for general settings.
+`zaturarc`, but modularized to separate the color themes for general settings.
 
-For change the theme, change this line:
+To change the theme, modify this line:
 
 ``` zaturarc
 include themes/gruvbox-light
