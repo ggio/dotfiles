@@ -5,7 +5,7 @@ Feel free to browse, copy, or modify them in any way.
 
 # Installation and Usage
 
-Getting and using it with git and [stow](https://www.gnu.org/software/stow/) is straightforward.
+Getting and using it with git and [stow](https://www.gnu.org/software/stow/) is pretty and beautifully straightforward:
 
 
 ``` Bash
