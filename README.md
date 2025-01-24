@@ -1,8 +1,9 @@
 Central repository for my config files.
 
-# Install and use
+# Installation and Usage
 
-Usage with `stow` is quite simple:
+Using it with stow is straightforward.
+
 
 ``` Bash
 git clone git@github.com:ggio/dotfiles.git ~/.dotfiles
