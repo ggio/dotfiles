@@ -1,8 +1,11 @@
+# My dotfiles
+
 Central repository for my config files.
+Feel free to browse, copy, or modify them in any way.
 
 # Installation and Usage
 
-Using it with [stow](https://www.gnu.org/software/stow/) is straightforward.
+Getting and using it with git and [stow](https://www.gnu.org/software/stow/) is straightforward.
 
 
 ``` Bash
