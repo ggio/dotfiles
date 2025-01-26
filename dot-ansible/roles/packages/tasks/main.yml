@@ -1,0 +1,40 @@
+---
+- name: Install packages with dnf
+  become: true
+  ansible.builtin.dnf:
+    name:
+      # Overall packages
+      - ansible
+      - celluloid
+      - gimp
+      - gnome-tweaks
+      - gnucash
+      - gnuplot
+      - keepassxc
+      - mpv
+      - neovim
+      - pandoc
+      - pdfarranger
+      - texlive-scheme-full
+      - transmission
+      - xpad
+      - zathura
+      - zathura-pdf-poppler
+
+      # For MS fonts
+      - curl
+      - cabextract
+      - xorg-x11-font-utils
+      - fontconfig
+      # TODO: insert RPM package
+
+    state: present
+
+- name: Install packages with flatpak
+  become: false
+  community.general.flatpak:
+    name:
+      - com.dropbox.Client
+      - md.obsidian.Obsidian
+      - org.jabref.jabref
+    state: present

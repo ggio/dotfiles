@@ -1,0 +1,20 @@
+---
+- name: My fedora config
+  hosts: localhost
+  roles:
+    # clone dotfiles repo with git
+    - dotfiles      # Install and run stow
+    - packages      # Install overall packages with dnf and flatpak
+    # fontes MS
+    # multimedia
+    # atalhos
+    # docker
+    # vscode
+
+- name: Install rpmfusion repos and packages
+  hosts: localhost
+  become: true
+  gather_facts: true
+  roles:
+    - robertdebock.rpmfusion    # Install rpmfusion repos
+    - packages.rpmfusion        # Install rpmfusion packages

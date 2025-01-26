@@ -1,0 +1,6 @@
+---
+- name: Install Nvidia drivers
+  ansible.builtin.dnf:
+    name:
+      - akmod-nvidia
+    state: present

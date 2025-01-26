@@ -1,0 +1,13 @@
+---
+- name: Ensure stow is installed
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - stow
+    state: present
+
+- name: Create symlinks for dotfiles with stow
+  become: false
+  ansible.builtin.shell: "stow . --dotfiles --target {{ ansible_env. HOME }} --verbose=2"
+  register: result
+  changed_when: "result.stderr is search('LINK: ')"

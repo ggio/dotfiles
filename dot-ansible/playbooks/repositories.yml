@@ -1,0 +1,8 @@
+---
+- name: Repositories
+  hosts: localhost
+  become: true
+  gather_facts: true
+
+  roles:
+    - robertdebock.rpmfusion    # Install rpmfusion repos
