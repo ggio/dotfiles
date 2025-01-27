@@ -19,12 +19,12 @@ Contains an all-in-one setup playbook for my Fedora workstations.
 While currently a single playbook, I might modularize it in the future.
 
 Included roles:
-- **dotfiles** -- automates the management of config files using stow, inspired
-  by [@phelipetls](https://github.com/phelipetls) [tips and instructions](https://phelipetls.github.io/posts/introduction-to-ansible/#stow).
-- [**robertdebock.rpmfusion**](https://github.com/robertdebock/ansible-role-rpmfusion) -- installs both Free and Nonfree RPM Fusion repositories.
-- **packages** -- installs my go-to packages via `dnf` and `flatpak`.
-- **msfonts** -- install MS fonts from `mscorefonts2` and its dependencies.
-- **multimedia** -- install essential multimedia plugins.
+- **dotfiles**: automates the management of config files using stow, adapted
+from [@phelipetls](https://github.com/phelipetls) [tips and instructions](https://phelipetls.github.io/posts/introduction-to-ansible/#stow).
+- [**robertdebock.rpmfusion**](https://github.com/robertdebock/ansible-role-rpmfusion): installs both Free and Nonfree RPM Fusion repositories.
+- **packages**: installs my go-to packages via `dnf` and `flatpak`.
+- **msfonts**: install MS fonts from `mscorefonts2` and its dependencies.
+- **multimedia**: install essential multimedia plugins.
 
 # Neovim
 
