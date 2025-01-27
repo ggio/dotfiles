@@ -20,11 +20,11 @@ While currently a single playbook, I might modularize it in the future.
 
 Included roles:
 - **dotfiles**: automates the management of config files using stow, adapted
-from [@phelipetls](https://github.com/phelipetls) [tips and instructions](https://phelipetls.github.io/posts/introduction-to-ansible/#stow).
-- [**robertdebock.rpmfusion**](https://github.com/robertdebock/ansible-role-rpmfusion): installs both Free and Nonfree RPM Fusion repositories.
-- **packages**: installs my go-to packages via `dnf` and `flatpak`.
 - **msfonts**: install MS fonts from `mscorefonts2` and its dependencies.
 - **multimedia**: install essential multimedia plugins.
+- **packages**: installs my go-to packages via `dnf` and `flatpak`.
+- [**robertdebock.rpmfusion**](https://github.com/robertdebock/ansible-role-rpmfusion): installs both Free and Nonfree RPM Fusion repositories.
+from [@phelipetls](https://github.com/phelipetls) [tips and instructions](https://phelipetls.github.io/posts/introduction-to-ansible/#stow).
 
 # Neovim
 
@@ -33,8 +33,8 @@ My Neovim configuration, based on [kickstart.nvim](https://github.com/nvim-lua/k
 Some added features, plugins and tweaks:
 
 * Made kickstart.nvim **modular**, for readability and maintenance.
-* [oil.nvim](https://github.com/stevearc/oil.nvim) as a amazing file/directory explorer.
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) and [md-to-html](https://github.com/realprogrammersusevim/md-to-html.nvim) for working with md files.
+* [oil.nvim](https://github.com/stevearc/oil.nvim) as a amazing file/directory explorer.
 * [rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim) for working with csv files.
 * [VimTex](https://github.com/lervag/vimtex) for LaTeX filetype and syntax.
 
