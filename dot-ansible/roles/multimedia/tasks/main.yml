@@ -1,6 +1,8 @@
 ---
-- name: 
+# Installing plugins for playing movies and music
+# Instructions: https://docs.fedoraproject.org/en-US/quick-docs/installing-plugins-for-playing-movies-and-music/
+- name: Install multimedia libraries with dnf
+  become: true
   ansible.builtin.dnf:
-    name:
-      - 
+    name: '@multimedia'
     state: present

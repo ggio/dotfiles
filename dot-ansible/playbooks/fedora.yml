@@ -1,20 +1,37 @@
 ---
-- name: My fedora config
+# All-in-one setup playbook for my Fedora workstations
+
+- name: Manage dotfiles
   hosts: localhost
   roles:
-    - dotfiles      # Install and run stow
-    - packages      # Install overall packages with dnf and flatpak
-    - msfonts       # MS fonts from mscorefonts2
-    # atalhos
-    # docker
-    # vscode
+    - dotfiles                  # Config files managament with stow
 
 
-- name: Install rpmfusion repos and packages
+- name: Install repositories
   hosts: localhost
   become: true
   gather_facts: true
   roles:
     - robertdebock.rpmfusion    # Install rpmfusion repos
-    # - nvidia                    # Install nvidia drivers
-    # - multimedia
+
+
+- name: Install overall packages
+  hosts: localhost
+  roles:
+    - packages                  # Install packages with dnf and flatpak
+
+
+- name: Install fonts and multimedia plugins
+  hosts: localhost
+  roles:
+    - msfonts                   # Install MS fonts from mscorefonts2
+    - multimedia                # Install multimedia plugins
+
+
+# TODO:
+  # shortkeys
+  # docker
+  # amc
+  # vscode
+  # - nvidia                    # Install nvidia drivers | Can break things
+

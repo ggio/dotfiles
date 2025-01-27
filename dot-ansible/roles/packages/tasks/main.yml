@@ -1,42 +1,134 @@
 ---
-- name: Install overall packages with dnf
+# Tasks for dnf and flatpak packages
+
+#=================================================#
+
+# dnf packages
+- name: Install celluloid (dnf)
   become: true
   ansible.builtin.dnf:
     name:
-      - ansible
       - celluloid
+    state: present
+
+- name: Install gimp (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - gimp
+    state: present
+
+- name: Install gnome-tweaks (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - gnome-tweaks
+    state: present
+
+- name: Install gnucash (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - gnucash
+    state: present
+
+- name: Install gnuplot (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - gnuplot
+    state: present
+
+- name: Install keepassxc (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - keepassxc
+    state: present
+
+- name: Install mpv (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - mpv
+    state: present
+
+- name: Install neovim (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - neovim
+    state: present
+
+- name: Install pandoc (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - pandoc
+    state: present
+
+- name: Install pdfarranger (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - pdfarranger
+    state: present
+
+- name: Install texlive-scheme-full (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - texlive-scheme-full
+    state: present
+
+- name: Install transmission (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - transmission
+    state: present
+
+- name: Install xpad (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - xpad
+    state: present
+
+- name: Install zathura (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - zathura
+    state: present
+
+- name: Install zathura-pdf-poppler (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
       - zathura-pdf-poppler
     state: present
 
-- name: Install packages with flatpak
+#=================================================#
+
+# Flatpak packages
+- name: Install dropbox (flatpak)
   become: false
-  community.general.flatpak:
+  ansible.builtin.flatpak:
     name:
       - com.dropbox.Client
-      - md.obsidian.Obsidian
-      - org.jabref.jabref
     state: present
 
-- name: Install MS fonts
-  become: true
-  ansible.builtin.dnf:
+- name: Install obsidian (flatpak)
+  become: false
+  ansible.builtin.flatpak:
     name:
-      - curl
-      - cabextract
-      - xorg-x11-font-utils
-      - fontconfig
-      - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+      - md.obsidian.Obsidian
+    state: present
+
+- name: Install jabref (flatpak)
+  become: false
+  ansible.builtin.flatpak:
+    name:
+      - org.jabref.jabref
     state: present
