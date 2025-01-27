@@ -6,7 +6,6 @@
   roles:
     - dotfiles                  # Config files managament with stow
 
-
 - name: Install repositories
   hosts: localhost
   become: true
@@ -14,19 +13,11 @@
   roles:
     - robertdebock.rpmfusion    # Install rpmfusion repos
 
-
 - name: Install overall packages
   hosts: localhost
   roles:
     - packages                  # Install packages with dnf and flatpak
-
-
-- name: Install fonts and multimedia plugins
-  hosts: localhost
-  roles:
     - msfonts                   # Install MS fonts from mscorefonts2
-    - multimedia                # Install multimedia plugins
-
 
 # TODO:
   # shortkeys
