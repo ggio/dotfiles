@@ -47,3 +47,9 @@ To change the theme, modify this line:
 ``` zaturarc
 include themes/gruvbox-light
 ```
+
+# Extra setup
+
+* **Bash Aliases**: custom aliases are stored in `.bashrc.d`.
+* **Font**: [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads) (used for Neovim).
+* **Icons**: [Gruvbox-Plus-Dark Icon Pack](https://github.com/SylEleuth/gruvbox-plus-icon-pack).
