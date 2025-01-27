@@ -20,11 +20,11 @@ While currently a single playbook, I might modularize it in the future.
 
 Included roles:
 - **dotfiles**: automates the management of config files using `stow`, adapted
-- **msfonts**: install MS fonts from `mscorefonts2` and its dependencies.
+  from [@phelipetls](https://github.com/phelipetls) [tips and instructions](https://phelipetls.github.io/posts/introduction-to-ansible/#stow).
+- **msfonts**: install MS fonts from [`mscorefonts2`](https://mscorefonts2.sourceforge.net/) and its dependencies.
 - **multimedia**: install essential multimedia plugins.
 - **packages**: installs my go-to packages via `dnf` and `flatpak`.
 - [**robertdebock.rpmfusion**](https://github.com/robertdebock/ansible-role-rpmfusion): installs both Free and Nonfree RPM Fusion repositories.
-from [@phelipetls](https://github.com/phelipetls) [tips and instructions](https://phelipetls.github.io/posts/introduction-to-ansible/#stow).
 
 # Neovim
 
