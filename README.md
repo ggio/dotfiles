@@ -19,7 +19,7 @@ Contains an all-in-one setup playbook for my Fedora workstations.
 While currently a single playbook, I might modularize it in the future.
 
 Included roles:
-- **dotfiles**: automates the management of config files using stow, adapted
+- **dotfiles**: automates the management of config files using `stow`, adapted
 - **msfonts**: install MS fonts from `mscorefonts2` and its dependencies.
 - **multimedia**: install essential multimedia plugins.
 - **packages**: installs my go-to packages via `dnf` and `flatpak`.
