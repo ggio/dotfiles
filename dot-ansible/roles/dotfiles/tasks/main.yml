@@ -1,4 +1,8 @@
 ---
+# Tasks for handling dotfiles
+# It assumes they are located in ~/.dotfiles
+# Following and adapting these tips and instructions: https://phelipetls.github.io/posts/introduction-to-ansible/
+
 - name: Ensure stow is installed
   become: true
   ansible.builtin.dnf:
@@ -6,8 +10,8 @@
       - stow
     state: present
 
-- name: Create symlinks for dotfiles with stow
+- name: Run stow
   become: false
-  ansible.builtin.shell: "stow . --dotfiles --target {{ ansible_env. HOME }} --verbose=2"
+  ansible.builtin.shell: "stow -d ~/.dotfiles --dotfiles --verbose=2 ."
   register: result
   changed_when: "result.stderr is search('LINK: ')"

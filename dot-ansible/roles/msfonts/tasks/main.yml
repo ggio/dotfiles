@@ -1,0 +1,21 @@
+---
+# Role for installing MS fonts
+# following instructions from fosslinux.com: https://www.fosslinux.com/42406/how-to-install-microsoft-truetype-fonts-on-fedora.htm
+
+- name: Ensure the prerequisite utilities are installed
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - curl
+      - cabextract
+      - xorg-x11-font-utils
+      - fontconfig
+    state: present
+
+- name: Install mscorefonts2 from sourceforge
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+    disable_gpg_check: true
+    state: present

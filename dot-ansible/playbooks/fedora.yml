@@ -2,14 +2,13 @@
 - name: My fedora config
   hosts: localhost
   roles:
-    # clone dotfiles repo with git
     - dotfiles      # Install and run stow
     - packages      # Install overall packages with dnf and flatpak
-    # fontes MS
-    # multimedia
+    - msfonts       # MS fonts from mscorefonts2
     # atalhos
     # docker
     # vscode
+
 
 - name: Install rpmfusion repos and packages
   hosts: localhost
@@ -17,4 +16,5 @@
   gather_facts: true
   roles:
     - robertdebock.rpmfusion    # Install rpmfusion repos
-    - packages.rpmfusion        # Install rpmfusion packages
+    # - nvidia                    # Install nvidia drivers
+    # - multimedia
