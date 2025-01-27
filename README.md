@@ -7,12 +7,23 @@ Feel free to browse, copy, or modify them in any way.
 
 Getting and using it with git and [stow](https://www.gnu.org/software/stow/) is pretty and beautifully straightforward:
 
-
 ``` Bash
 git clone git@github.com:ggio/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow --dotfiles .
 ```
+
+# Ansible
+
+Contains an all-in-one setup playbook for my Fedora workstations. 
+While currently a single playbook, I might modularize it in the future.
+
+Included roles:
+- **dotfiles** - automates the management of config files using stow.
+- [**robertdebock.rpmfusion**](https://github.com/robertdebock/ansible-role-rpmfusion) - installs both Free and Nonfree RPM Fusion repositories.
+- **packages** - installs my go-to packages via `dnf` and `flatpak`.
+- **msfonts** - install MS fonts from `mscorefonts2` and its dependencies.
+- **multimedia** - install essential multimedia plugins.
 
 # Neovim
 
