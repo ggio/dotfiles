@@ -1,4 +1,8 @@
 ---
+#=================================================#
+# Install Nvidia driver can be risky
+# Things can break, make backup, be care, stay safe
+#=================================================#
 - name: Install Nvidia drivers
   ansible.builtin.dnf:
     name:

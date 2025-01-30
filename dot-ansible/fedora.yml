@@ -18,6 +18,7 @@
   roles:
     - packages                  # Install packages with dnf and flatpak
     - msfonts                   # Install MS fonts from mscorefonts2
+    - neomutt                   # Install NeoMutt and its ecosystem
 
 # TODO:
   # shortkeys

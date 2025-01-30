@@ -1,0 +1,46 @@
+---
+#=================================================#
+# Tasks for NeoMutt related packages
+#=================================================#
+
+- name: Install neomutt (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - neomutt
+    state: present
+
+- name: Install notmuch (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - notmuch
+    state: present
+
+- name: Install abook (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - abook
+    state: present
+
+- name: Install w3m (dnf)     # For html rendering
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - w3m
+    state: present
+
+- name: Install isync (dnf)   # For receiving
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - isync
+    state: present
+
+- name: Install msmtp (dnf)   # For sending
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - msmtp
+    state: present

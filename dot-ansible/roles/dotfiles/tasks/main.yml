@@ -1,7 +1,9 @@
 ---
+#=================================================#
 # Tasks for handling dotfiles
 # It assumes they are located in ~/.dotfiles
 # Following and adapting these tips and instructions: https://phelipetls.github.io/posts/introduction-to-ansible/
+#=================================================#
 
 - name: Ensure stow is installed
   become: true

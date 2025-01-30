@@ -48,7 +48,7 @@ I’ve left out files containing sensitive information, such as:
 
 * `isync` and `msmtp` dotfiles
 * `abook` database
-* `NeoMutt aliases and personal info
+* `NeoMutt` aliases and personal info
 
 But these are quite situational, anyway. You can learn more about them in the docs.
 

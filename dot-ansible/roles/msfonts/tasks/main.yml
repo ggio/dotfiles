@@ -1,6 +1,8 @@
 ---
+#=================================================#
 # Role for installing MS fonts
 # following instructions from fosslinux.com: https://www.fosslinux.com/42406/how-to-install-microsoft-truetype-fonts-on-fedora.htm
+#=================================================#
 
 - name: Ensure the prerequisite utilities are installed
   become: true
