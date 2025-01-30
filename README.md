@@ -44,6 +44,8 @@ Here are my main config files for `NeoMutt` and its ecosystem.
 I also adapted a nice Gruvbox color theme from
 [shuber2](https://github.com/shuber2/mutt-gruvbox).
 
+![Neomutt Rice](neomutt-rice.png)
+
 I’ve left out files containing sensitive information, such as:
 
 * `isync` and `msmtp` dotfiles
