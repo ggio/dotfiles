@@ -1,0 +1,107 @@
+# ===== Modules and paths ===== #
+
+set mailcap_path =  ~/.config/neomutt/mailcap		# Handle different filetypes
+source		    ~/.config/neomutt/remap.muttrc			# Remap keybinding
+
+# Personal stuff
+
+set alias_file=	    ~/.dotfiles.private/neomutt/aliases.muttrc 	# Where to store aliases
+source		    ~/.dotfiles.private/neomutt/aliases.muttrc			# Sourcing aliases
+source		    ~/.dotfiles.private/neomutt/personal.muttrc
+
+# ===== Colors and style ===== #
+
+source ~/.config/neomutt/colors/gruvbox.muttrc
+# source ~/.config/neomutt/colors/dracula.muttrc
+
+# ===== Overall config ===== #
+
+set folder=~/Email/proton
+set mbox_type=Maildir
+set send_charset = "utf-8"
+set send_charset = "utf-8"
+set assumed_charset = "utf-8"
+set mail_check=2 # seconds
+
+unset allow_8bit				# Produce correct MIME
+set include=yes					# Always include a copy when replying
+set editor = "nvim +':set textwidth=0'"		# Use nvim without textwidth
+set sort = threads				# Sort by threads
+set index_format="%4C %Z %{%d %b} %-25.25L %s" # (%?l?%4l&%4c?)"
+# set status_format = "-%r-NeoMutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
+# set record="=INBOX"				# My own replies in the inbox
+# fcc-hook . '+Sent,^'
+
+set mark_old = no		# Unread mail stay unread until read
+set forward_attachments = yes	# Attachments are forwarded with mail
+set fast_reply			# Skip to compose when replying
+set fcc_attach			# Save attachments with the body
+set forward_format = "Fwd: %s"	# Format of subject when forwarding
+set forward_quote		# Include message in forwards
+set reverse_name		# Reply as whomever it was to
+set include			# Include message in replies
+set mail_check=60		# To avoid lags using IMAP with some email providers
+set date_format="%d/%m/%y %I:%M%p"		# Show date in day/month/year hour:minute format
+# set sort_aux = reverse-last-date-received	# Sort threads by last date recieved - newest first
+
+set abort_noattach = ask-yes					# Ask if sended without attachment
+set abort_noattach_regex = "\\<anex(|o|os|ado?)\\>"		# Search for the following regular expression in the body of the email
+# English: attach, attached, attachment, attachments
+
+# ===== Notmuch ===== #
+
+set nm_default_uri = "notmuch:///home/gregorio/Email/"		# path to the maildir
+set nm_record = yes
+set nm_record_tags = "-inbox,unread,archive,junk,star,sent,local"
+set nm_unread_tag = unread
+# set sendmail="/PATH/TO/bin/nm_sendmail"         # enables parsing of outgoing mail
+
+# ===== Sidebar ===== #
+
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
+# set sidebar_sort_method = alpha
+
+# ===== MIME settings ===== #
+
+auto_view text/html
+mime_lookup application/octet-stream
+alternative_order text/enriched text/plain text/html text
+
+# auto_view application/ms-tnef text/x-vcard
+# auto_view application/x-chess application/x-lotus-notes
+# auto_view text/html application/x-gzip application/x-gunzip
+# auto_view application/rtf application/x-rath
+# auto_view application/msword
+
+# ===== Contacts ===== #
+
+set query_command= "abook --mutt-query '%s'"	# When looking for contacts, use this command
+
+# ===== Mailboxes ===== #
+
+set spoolfile = "+INBOX"	# Directory to poll for new mail
+
+mailboxes	    +INBOX 
+virtual-mailboxes   "Unread"		    "notmuch://?query=tag:unread"
+mailboxes	    +Archive 
+mailboxes	    +Drafts 
+mailboxes	    +Sent 
+mailboxes	    +Spam 
+mailboxes 	    +Starred 
+mailboxes 	    +Trash
+named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:empty1"
+mailboxes	    +Labels.UNIPAC 
+named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:empty"
+mailboxes	    +Folders.Listas.neomutt
+
+# "INBOX"     "notmuch://?query=tag:inbox and NOT tag:archive "\
+# "Starred"   "notmuch://?query=tag:star"\
+# "Sent"      "notmuch://?query=tag:sent"\
+# virtual-mailboxes "Flagged"    "notmuch://?query=tag:flagged"
+
+

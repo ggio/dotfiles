@@ -37,6 +37,21 @@ Some added features, plugins and tweaks:
 * [rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim) for working with csv files.
 * [VimTex](https://github.com/lervag/vimtex) for LaTeX filetype and syntax.
 
+# NeoMutt and company
+
+Here are my main config files for `NeoMutt` and its ecosystem.
+
+I also adapted a nice Gruvbox color theme from
+[shuber2](https://github.com/shuber2/mutt-gruvbox).
+
+I’ve left out files containing sensitive information, such as:
+
+* `isync` and `msmtp` dotfiles
+* `abook` database
+* `NeoMutt aliases and personal info
+
+But these are quite situational, anyway. You can learn more about them in the docs.
+
 # Zathura
 
 Based on [benbrastmckie/.config](https://github.com/benbrastmckie/.config)
