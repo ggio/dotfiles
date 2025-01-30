@@ -5,29 +5,29 @@ source		    ~/.config/neomutt/remap.muttrc			# Remap keybinding
 
 # Personal stuff
 
-set alias_file=	    ~/.dotfiles.private/neomutt/aliases.muttrc 	# Where to store aliases
+set alias_file =    ~/.dotfiles.private/neomutt/aliases.muttrc 	# Where to store aliases
 source		    ~/.dotfiles.private/neomutt/aliases.muttrc			# Sourcing aliases
 source		    ~/.dotfiles.private/neomutt/personal.muttrc
 
 # ===== Colors and style ===== #
 
-source ~/.config/neomutt/colors/gruvbox.muttrc
-# source ~/.config/neomutt/colors/dracula.muttrc
+source		    ~/.config/neomutt/colors/gruvbox.muttrc
+# source	    ~/.config/neomutt/colors/dracula.muttrc
 
 # ===== Overall config ===== #
 
-set folder=~/Email/proton
-set mbox_type=Maildir
+set folder = ~/Email/proton
+set mbox_type = Maildir
 set send_charset = "utf-8"
 set send_charset = "utf-8"
 set assumed_charset = "utf-8"
-set mail_check=2 # seconds
+set mail_check = 2 # seconds
 
 unset allow_8bit				# Produce correct MIME
-set include=yes					# Always include a copy when replying
+set include = yes					# Always include a copy when replying
 set editor = "nvim +':set textwidth=0'"		# Use nvim without textwidth
 set sort = threads				# Sort by threads
-set index_format="%4C %Z %{%d %b} %-25.25L %s" # (%?l?%4l&%4c?)"
+set index_format = "%4C %Z %{%d %b} %-25.25L %s" # (%?l?%4l&%4c?)"
 # set status_format = "-%r-NeoMutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
 # set record="=INBOX"				# My own replies in the inbox
 # fcc-hook . '+Sent,^'
@@ -95,6 +95,7 @@ mailboxes	    +Spam
 mailboxes 	    +Starred 
 mailboxes 	    +Trash
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:empty1"
+mailboxes	    +Labels.Contas 
 mailboxes	    +Labels.UNIPAC 
 named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:empty"
 mailboxes	    +Folders.Listas.neomutt

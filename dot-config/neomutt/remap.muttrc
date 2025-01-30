@@ -82,6 +82,7 @@ macro index,pager   	gu	"<change-folder>=Labels.UNIPAC<enter>"	"go to [u]nipac"
 macro index,pager   	Mu	";<save-message>=Labels.UNIPAC<enter>"	"move mail to [u]nipac"
 macro index,pager   	Cu	";<copy-message>=Labels.UNIPAC<enter>"	"copy mail to [u]nipac"
 
+macro index,pager   	gc	"<change-folder>=Labels.Contas<enter>"	"go to [c]ontas"
 macro index,pager   	gr	"<change-folder>Unread<enter>"		"go to un[r]ead"
 macro index,pager   	gl	"<change-folder>^V ^V ---^V listas^V ---<enter>"	"go to [l]istas"
 
