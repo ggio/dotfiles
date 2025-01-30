@@ -22,6 +22,8 @@ set send_charset = "utf-8"
 set send_charset = "utf-8"
 set assumed_charset = "utf-8"
 set mail_check = 2 # seconds
+set postponed = "+Drafts"
+set tmp_dir = "~/Email/.tmp"
 
 unset allow_8bit				# Produce correct MIME
 set include = yes					# Always include a copy when replying

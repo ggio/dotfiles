@@ -36,9 +36,9 @@ color index_date    	color248	default '.*'
 color index_author 	color221	default '.*'
 # color index_subject 	color223	default '.*'
 color index		color210	default 	~D # deleted messages
-color index		color111	default 	~F # flagged messages
 color index		color142	default 	~N # new messages
 color index		color175	default 	~Q # quoted messages 
+color index		color111	default 	~F # flagged messages
 color index		brightcolor237	color221 	~T # tagged messages
 color index_author	brightcolor237	default 	~T # tagged messages
 color index_date	brightcolor237	default 	~T # tagged messages
@@ -83,7 +83,7 @@ color attachment	color228	color235
 color bold          	color229	color235
 color error         	color167	color235
 color hdrdefault    	color246	color235
-color indicator     	color208	color237
+color indicator     	color208	default
 color markers       	color243	color235
 color message		cyan		default
 color normal        	color223 	color235
@@ -97,7 +97,7 @@ color search        	color235 	color208
 color signature     	color108 	color235
 color status        	color223 	color237
 color tilde         	color243 	color235
-color tree          	color142 	color235
+color tree          	color142 	default
 color underline     	color223 	color239
 
 # sidebar ------------ foreground ---- background -----------------------------
