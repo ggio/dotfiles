@@ -21,15 +21,18 @@ set mbox_type = Maildir
 set send_charset = "utf-8"
 set send_charset = "utf-8"
 set assumed_charset = "utf-8"
-set mail_check = 2 # seconds
+set mail_check = 2	# seconds
 set postponed = "+Drafts"
 set tmp_dir = "~/Email/.tmp"
+
+# Default hidden tags:
+# set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
 
 unset allow_8bit				# Produce correct MIME
 set include = yes					# Always include a copy when replying
 set editor = "nvim +':set textwidth=0'"		# Use nvim without textwidth
 set sort = threads				# Sort by threads
-set index_format = "%4C %Z %{%d %b} %-25.25L %s" # (%?l?%4l&%4c?)"
+set index_format = "%4C %Z %{%d %b} %-25.25L %s (%g)" # size: (%?l?%4l&%4c?)
 # set status_format = "-%r-NeoMutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
 # set record="=INBOX"				# My own replies in the inbox
 # fcc-hook . '+Sent,^'
@@ -52,7 +55,8 @@ set abort_noattach_regex = "\\<anex(|o|os|ado?)\\>"		# Search for the following 
 
 # ===== Notmuch ===== #
 
-set nm_default_uri = "notmuch:///home/gregorio/Email/"		# path to the maildir
+set nm_default_url = "notmuch:///home/gregorio/Email/"		# path to the maildir
+set nm_query_type = "threads"
 set nm_record = yes
 set nm_record_tags = "-inbox,unread,archive,junk,star,sent,local"
 set nm_unread_tag = unread
@@ -88,13 +92,20 @@ set query_command= "abook --mutt-query '%s'"	# When looking for contacts, use th
 
 set spoolfile = "+INBOX"	# Directory to poll for new mail
 
+virtual-mailboxes   "INBOX"	    "notmuch://?query=tag:inbox and NOT tag:archive "
+virtual-mailboxes   "Unread"	    "notmuch://?query=tag:unread"
+virtual-mailboxes   "Drafts"	    "notmuch://?query=tag:draft"
+# virtual-mailboxes   "Starred"   "notmuch://?query=tag:star"\
+virtual-mailboxes   "Sent"      "notmuch://?query=tag:sent"
+virtual-mailboxes   "Flagged"   "notmuch://?query=tag:flagged"
+named-mailboxes	    "  --- folders ---"	    "notmuch://?query=tag:empty2"
 mailboxes	    +INBOX 
 virtual-mailboxes   "Unread"		    "notmuch://?query=tag:unread"
 mailboxes	    +Archive 
-mailboxes	    +Drafts 
+# mailboxes	    +Drafts 
 mailboxes	    +Sent 
 mailboxes	    +Spam 
-mailboxes 	    +Starred 
+# mailboxes 	    +Starred 
 mailboxes 	    +Trash
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:empty1"
 mailboxes	    +Labels.Contas 

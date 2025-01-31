@@ -44,3 +44,9 @@
     name:
       - msmtp
     state: present
+
+- name: Create the maildir if it does not exist
+  ansible.builtin.file:
+    path: ~/Email/proton
+    state: directory
+    mode: '0755'

@@ -26,24 +26,46 @@
 # purple = 175
 # aqua   = 108
 # orange = 208
+# dark orange = 94
 
 # See http://www.mutt.org/doc/manual/#color
 
 # message index ------ foreground ---- background -----------------------------
-# color index		color248	default '.*' # Symbols
-color index_size	color248	default '.*'
-color index_date    	color248	default '.*'
+color index		color248		default '.*'
+# color index_tags 	color223	default '.*'
 color index_author 	color221	default '.*'
-# color index_subject 	color223	default '.*'
-color index		color210	default 	~D # deleted messages
-color index		color142	default 	~N # new messages
-color index		color175	default 	~Q # quoted messages 
-color index		color111	default 	~F # flagged messages
-color index		brightcolor237	color221 	~T # tagged messages
+color index_date    	color248	default '.*'
+color index_number	color223	default '.*'
+color index_size	color248	default '.*'
+color index_subject	color223	default '.*'
+
+color index_flags	color210	default 	~D # deleted messages
+color index_subject	color210	default 	~D # deleted messages
+
+color index_flags	color142	default 	~N # new messages
+color index_subject	color142	default 	~N # new messages
+
+color index_flags	color175	default 	~Q # quoted messages 
+color index_subject	color175	default 	~Q # quoted messages 
+
+# color index_date	color111	default 	~F # flagged messages
+color index_flags	brightcolor111	default 	~F # flagged messages
+# color index_number	color111	default 	~F # flagged messages
+color index_subject	color111	default 	~F # flagged messages
+
+color index		brightcolor237	color222 	~T # tagged messages
 color index_author	brightcolor237	default 	~T # tagged messages
 color index_date	brightcolor237	default 	~T # tagged messages
-color index		color141	default		~v # messages part of a collapsed thread
-color index		color108	color235	~O
+color index_flags	brightcolor237	default 	~T # tagged messages
+color index_number	brightcolor237	default 	~T # tagged messages
+color index_subject	brightcolor237	default 	~T # tagged messages
+
+color index_flags	color141	default		~v # messages part of a collapsed thread
+color index_subject	color141	default		~v # messages part of a collapsed thread
+
+color index_flags	color108	color235	~O
+color index_subject	color108	color235	~O
+
 # color index 		color109 	color235 	~P
 # color index 		color167 	color235 	~=
 
