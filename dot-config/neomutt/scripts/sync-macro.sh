@@ -2,6 +2,9 @@
 set -eu
 
 echo ""
+echo "Sync Macro:"
+
+echo ""
 echo "Running 'msbsync proton':"
 echo ""
 mbsync proton 
