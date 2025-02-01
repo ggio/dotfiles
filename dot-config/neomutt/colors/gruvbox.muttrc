@@ -69,43 +69,12 @@ color index_subject	color108	color235	~O
 # color index 		color109 	color235 	~P
 # color index 		color167 	color235 	~=
 
-# message index ------ foreground ---- background -----------------------------
-# Default index colors:
-# color index		color248	default '.*' # Symbols
-# color index_number  	color250	default '.*'
-# color index_subject 	color253	default '.*'
-#
-# # New mail is boldened:
-# color index color142 default ~N
-# color index_size color142 default ~N
-# color index_date color142 default ~N
-# color index_author color142 default "~N"
-# color index_subject color142 default "~N"
-#
-# # Tagged mail is highlighted:
-# color index lightblue default ~T
-# color index_subject lightblue default "~T"
-#
-# # Flagged mail is highlighted:
-# color index color208 default ~F
-# color index_subject color208 default "~F"
-# color index_author color208 default "~F"
-# color index_date color208 default "~F"
-# color index_size color208 default "~F"
-#
-# # Marked for deletion
-# color index color235 color167 ~D
-# color index_subject color235 color167 ~D
-# color index_author color235 color167 ~D
-# color index_date color235 color167 ~D
-# color index_size color235 color167 ~D
-
 # general ------------ foreground ---- background -----------------------------
 color attachment	color228	color235
 color bold          	color229	color235
 color error         	color167	color235
 color hdrdefault    	color246	color235
-color indicator     	color208	default
+color indicator     	color208	color237
 color markers       	color243	color235
 color message		cyan		default
 color normal        	color223 	color235

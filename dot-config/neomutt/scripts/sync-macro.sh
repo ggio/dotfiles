@@ -1,3 +1,14 @@
 #!/bin/bash
 set -eu
-mbsync proton && notmuch new
+
+echo ""
+echo "Running 'msbsync proton':"
+echo ""
+mbsync proton 
+
+echo ""
+echo "Running 'notmuch new':"
+echo ""
+notmuch new
+
+echo ""

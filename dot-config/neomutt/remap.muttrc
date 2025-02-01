@@ -5,6 +5,7 @@ bind index,pager    g	    	noop
 bind index	    \Cf	    	noop
 bind index,pager    M	    	noop
 bind index,pager    C	    	noop
+bind index,pager    .	    	noop
 
 # General rebindings
 bind index	    gg		first-entry
@@ -43,104 +44,92 @@ bind pager 	    \005 	next-line		# Mouse wheel
 bind editor	    <Tab>	complete-query
 # bind index	    N		search-opposite		# Search back
 
-# Mailboxes mappings
+# ===== Notmuch mappings ===== #
+
 macro index,pager	gi	"<change-folder>Inbox<enter>"		"go to [i]nbox"
-macro index,pager	Mi	";<save-message>=INBOX<enter>"		"move mail to inbox"
-macro index,pager   	Ci	";<copy-message>=INBOX<enter>"		"copy mail to inbox"
+# macro index,pager	Mi	";<save-message>=INBOX<enter>"		"move mail to inbox"
+# macro index,pager   	Ci	";<copy-message>=INBOX<enter>"		"copy mail to inbox"
 
 macro index,pager   	gd	"<change-folder>Drafts<enter>"		"go to [d]rafts"
-macro index,pager   	Md	";<save-message>=Drafts<enter>"		"move mail to drafts"
-macro index,pager   	Cd	";<copy-message>=Drafts<enter>"		"copy mail to drafts"
+# macro index,pager   	Md	";<save-message>=Drafts<enter>"		"move mail to drafts"
+# macro index,pager   	Cd	";<copy-message>=Drafts<enter>"		"copy mail to drafts"
 
 macro index,pager   	gj	"<change-folder>Junk<enter>"		"go to [j]unk"
-macro index,pager   	Mj	";<save-message>=Junk<enter>"		"move mail to junk"
-macro index,pager   	Cj	";<copy-message>=Junk<enter>"		"copy mail to junk"
+# macro index,pager   	Mj	";<save-message>=Junk<enter>"		"move mail to junk"
+# macro index,pager   	Cj	";<copy-message>=Junk<enter>"		"copy mail to junk"
 
-macro index,pager   	gt	"<change-folder>=Trash<enter>"		"go to [t]rash"
-macro index,pager   	Mt	";<save-message>=Trash<enter>"		"move mail to trash"
-macro index,pager   	Ct	";<copy-message>=Trash<enter>"		"copy mail to trash"
+macro index,pager   	gt	"<change-folder>Trash<enter>"		"go to [t]rash"
+# macro index,pager   	Mt	";<save-message>=Trash<enter>"		"move mail to trash"
+# macro index,pager   	Ct	";<copy-message>=Trash<enter>"		"copy mail to trash"
 
-macro index,pager   	gs	"<change-folder>=Sent<enter>"		"go to [s]ent"
-macro index,pager   	Ms	";<save-message>=Sent<enter>"		"move mail to sent"
-macro index,pager   	Cs	";<copy-message>=Sent<enter>"		"copy mail to sent"
+macro index,pager   	gs	"<change-folder>Sent<enter>"		"go to [s]ent"
+# macro index,pager   	Ms	";<save-message>=Sent<enter>"		"move mail to sent"
+# macro index,pager   	Cs	";<copy-message>=Sent<enter>"		"copy mail to sent"
 
-macro index,pager   	ga	"<change-folder>=Archive<enter>"	"go to [a]rchive"
-macro index,pager   	Ma	";<save-message>=Archive<enter>"	"move mail to archive"
-macro index,pager   	Ca	";<copy-message>=Archive<enter>"	"copy mail to archive"
+macro index,pager   	ga	"<change-folder>Archive<enter>"		"go to [a]rchive"
+# macro index,pager   	Ma	";<save-message>=Archive<enter>"	"move mail to archive"
+# macro index,pager   	Ca	";<copy-message>=Archive<enter>"	"copy mail to archive"
 
 macro index,pager   	g*	"<change-folder>=Starred<enter>"	"go to [*]starred"
-macro index,pager   	M*	";<save-message>=Starred<enter>"	"move mail to starred"
-macro index,pager   	C*	";<copy-message>=Starred<enter>"	"copy mail to starred"
-macro index,pager   	gf	"<change-folder>=Starred<enter>"	"go to [f]flagged"
-macro index,pager   	Cf	";<copy-message>=Starred<enter>"	"copy mail to [f]flagged"
+# macro index,pager   	M*	";<save-message>=Starred<enter>"	"move mail to starred"
+# macro index,pager   	C*	";<copy-message>=Starred<enter>"	"copy mail to starred"
+macro index,pager   	gf	"<change-folder>Flagged<enter>"		"go to [f]flagged"
+# macro index,pager   	Cf	";<copy-message>=Starred<enter>"	"copy mail to [f]flagged"
 
-macro index,pager   	gm	"<change-folder>=Spam<enter>"		"go to spa[m]"
-macro index,pager   	Mm	";<save-message>=Spam<enter>"		"move mail to spa[m]"
-macro index,pager   	Cm	";<copy-message>=Spam<enter>"		"copy mail to spa[m]"
+macro index,pager   	gm	"<change-folder>Spam<enter>"		"go to spa[m]"
+# macro index,pager   	Mm	";<save-message>=Spam<enter>"		"move mail to spa[m]"
+# macro index,pager   	Cm	";<copy-message>=Spam<enter>"		"copy mail to spa[m]"
 
-macro index,pager   	gu	"<change-folder>=Labels.UNIPAC<enter>"	"go to [u]nipac"
-macro index,pager   	Mu	";<save-message>=Labels.UNIPAC<enter>"	"move mail to [u]nipac"
-macro index,pager   	Cu	";<copy-message>=Labels.UNIPAC<enter>"	"copy mail to [u]nipac"
+macro index,pager   	gu	"<change-folder>Unipac<enter>"		"go to [u]nipac"
+# macro index,pager   	Mu	";<save-message>=Labels.UNIPAC<enter>"	"move mail to [u]nipac"
+# macro index,pager   	Cu	";<copy-message>=Labels.UNIPAC<enter>"	"copy mail to [u]nipac"
 
-macro index,pager   	gc	"<change-folder>=Labels.Contas<enter>"	"go to [c]ontas"
+macro index,pager   	gc	"<change-folder>Contas<enter>"		"go to [c]ontas"
 macro index,pager   	gr	"<change-folder>Unread<enter>"		"go to un[r]ead"
-macro index,pager   	gl	"<change-folder>^V ^V ---^V listas^V ---<enter>"	"go to [l]istas"
+macro index,pager   	go	"<change-folder>To-Do<enter>"		"go to T[o]-Do"
+macro index,pager   	gl	"<change-folder>^V ^V ---^V lists^V ---<enter>"	"go to [l]ists"
 
 # Notmuch mappings
 macro index	    \\\\	"<vfolder-from-query>"	    		               "looks up a hand made query"
-macro index 	    A		"<modify-labels>+archive -unread -inbox<enter>"        "tag as Archived"
-macro index 	    I 		"<modify-labels>-inbox -unread<enter>"                 "removed from inbox"
-macro index 	    J 		"<modify-labels-then-hide>-inbox -unread +junk<enter>" "tag as Junk mail""
-macro index,pager   Cr 		"<modify-labels-then-hide>+unread<enter>"	       "tagged as unread""
-macro index,pager   gç 		"<modify-labels>+star<enter>"			       "tagged as starred""
-macro index 	    - 		"<modify-labels>-star<enter>"                          "tag as unstarred"
-
 bind index,pager + entire-thread
-bind index,pager \` modify-labels
 
+bind index,pager .. modify-labels	# Manualy modify tags
 
-# From prycon's
-#
-# macro index,pager a "<modify-labels-then-hide>-inbox,-unread\n<sync-mailbox>"
-# macro index,pager A ";<modify-labels-then-hide>-inbox,-unread\n<sync-mailbox>"
-# macro index,pager S ";<modify-labels-then-hide>-inbox,-unread,+spam,+killed\n<sync-mailbox>"
-# macro index,pager M ":source ~/dotfiles/muttfzf.sh|<enter>"
-#
-# # modify (notmuch/imap) tags
-# bind index,pager .l modify-labels
-# macro index,pager .L ";<modify-labels>"
-# # toggle (notmuch/imap) tag non-interactively.
-# macro index,pager .a "<modify-labels>!inbox\n"
-# macro index,pager .t "<modify-labels>!todo\n"
-# macro index,pager .y "<modify-labels>!reply\n"
-# macro index,pager .r "<modify-labels>!reply\n"
-# macro index,pager .w "<modify-labels>!waiting\n"
-# macro index,pager .W "<modify-labels>!work\n"
-# macro index,pager .p "<modify-labels>!personal\n"
-# macro index,pager .i "<modify-labels>!interesting\n"
-# macro index,pager .0 "<modify-labels>!lowpriority\n"
-# #single message version, S is preferred:
-# macro index,pager .j "<modify-labels>-inbox,-unread,+spam,+killed\n"
-#
-# macro index,pager ,0 "<vfolder-from-query>date:2M.. and tag:unread and NOT tag:killed and NOT tag:spam\n<collapse-all>\n"
-# macro index,pager ,\' "<vfolder-from-query>date:2M.. and tag:unread and NOT tag:killed and NOT tag:spam\n<collapse-all>\n"
-# macro index,pager ,1 "<change-vfolder>INBOX\n<collapse-all>\n"
-# macro index,pager ,2 "<vfolder-from-query>NOT tag:killed\n<collapse-all>\n"
-# macro index,pager ,a "<vfolder-from-query>NOT tag:killed\n<collapse-all>\n"
-# macro index,pager ,i "<change-vfolder>INBOX\n<collapse-all>\n"
-# macro index,pager ,s "<change-vfolder>sent\n<collapse-all>\n"
-# macro index,pager ,3 "<vfolder-from-query>tag:inbox AND tag:work\n<collapse-all>n"
-# macro index,pager ,4 "<vfolder-from-query>tag:inbox AND not tag:work and not tag:sxmo\n<collapse-all>\n"
-# macro index,pager ,5 "<vfolder-from-query>tag:inbox and tag:sxmo\n<collapse-all>\n"
-# macro index,pager ,r "<vfolder-from-query>tag:inbox AND tag:reply\n"
-# macro index,pager ,y "<vfolder-from-query>tag:inbox AND tag:reply\n"
-# macro index,pager ,t "<vfolder-from-query>tag:inbox AND tag:todo\n"
-# macro index,pager ,w "<vfolder-from-query>tag:inbox AND tag:waiting\n"
-# macro index,pager ,c "<vfolder-from-query>tag:inbox AND (mimetype:text/calendar OR mimetype:application/ics)\n"
-# macro index,pager ,C "<vfolder-from-query>mimetype:text/calendar OR mimetype:application/ics\n"
-# macro index,pager ,6 "<vfolder-from-query>tag:spam\n"
+# teste
+macro index,pager .t "<modify-tags-then-hide>+teste -inbox -unread<enter>"	"tag as teste"
+
+# flagged
+macro index,pager .f "<modify-tags>+flagged<enter>"	"tag as flagged"
+macro index,pager .F "<modify-tags>-flagged<enter>"	"untag as flagged"
+
+# inbox
+macro index,pager .i "<modify-tags>+inbox<enter>"	"tag as inbox"
+macro index,pager .I "<modify-tags>-inbox<enter>"	"untag as inbox"
+
+# todo
+macro index,pager .o "<modify-tags>+todo<enter>"	"tag as todo"
+macro index,pager .O "<modify-tags>-todo<enter>"	"untag as todo"
+
+# (un)read
+macro index,pager .r "<modify-tags>-unread<enter>"	"tag as read"
+
+# BIN
+
+# deleted
+# Maybe append: <sync-mailbox><check-stats><enter>
+macro index,pager .d "<modify-tags-then-hide>+deleted -inbox -unread<enter> ;<save-message>=Trash<enter>" "Notmuch: delete"
+macro index,pager .u "<modify-tags-then-hide>-deleted +inbox +unread<enter> ;<save-message>=INBOX<enter>" "Notmuch: undelete"
+
+# junk
+macro index,pager .j "<modify-tags-then-hide>+junk -inbox -unread<enter>"	"tag as junk"
+macro index,pager .J "<modify-tags-then-hide>-junk +inbox +unread<enter>"	"untag as junk"
+
+# spam
+macro index,pager .m "<modify-tags-then-hide>+spam -inbox -unread<enter>"	"tag as spam"
+macro index,pager .M "<modify-tags-then-hide>-spam +inbox +unread<enter>"	"untag as spam"
 
 # ===== Sidebar mappings ===== #
+
 bind index,pager    \Ck		sidebar-prev
 bind index,pager    \Cj 	sidebar-next
 bind index,pager    \Co 	sidebar-open
@@ -172,8 +161,11 @@ macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 # Sync mailbox based on pressing $
 macro index $ "<shell-escape>~/.config/neomutt/scripts/sync-macro.sh 2>&1<enter>" "Sync email and notmuch"
 
+# Run "notmuch new"
+macro index <F1> "<shell-escape>notmuch new<enter>" "Notmuch new"
+
 # My adapted version version of mw mailsync
-macro index O "<shell-escape>~/.config/neomutt/scripts/mailsync.sh<enter>" "run mailsync to sync all mail"
+# macro index O "<shell-escape>~/.config/neomutt/scripts/mailsync.sh<enter>" "run mailsync to sync all mail"
 
 # Send mails in markdown
 # Adapted from: <https://tom.wemyss.net/posts/neomutt-markdown-email/>

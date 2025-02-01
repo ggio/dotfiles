@@ -25,8 +25,6 @@ set mail_check = 2	# seconds
 set postponed = "+Drafts"
 set tmp_dir = "~/Email/.tmp"
 
-# Default hidden tags:
-# set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
 
 unset allow_8bit				# Produce correct MIME
 set include = yes					# Always include a copy when replying
@@ -62,6 +60,10 @@ set nm_record_tags = "-inbox,unread,archive,junk,star,sent,local"
 set nm_unread_tag = unread
 # set sendmail="/PATH/TO/bin/nm_sendmail"         # enables parsing of outgoing mail
 
+set hidden_tags = "unread,flagged,passed,replied,attachment,signed,encrypted"
+# Default hidden tags:
+# set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
+
 # ===== Sidebar ===== #
 
 set sidebar_visible = yes
@@ -93,37 +95,41 @@ set query_command= "abook --mutt-query '%s'"	# When looking for contacts, use th
 set spoolfile = "Inbox"	# Directory to poll for new mail
 
 named-mailboxes	    "  ---- main ----"	    "notmuch://?query=tag:emptymain"
-virtual-mailboxes   "Inbox"		    "notmuch://?query=tag:inbox and NOT tag:archive "
+virtual-mailboxes   "Inbox"		    "notmuch://?query=tag:inbox"
 virtual-mailboxes   "Unread"	    	    "notmuch://?query=tag:unread"
-virtual-mailboxes   "Archive"	    	    "notmuch://?query=tag:archive"
+virtual-mailboxes   "To-Do"	    	    "notmuch://?query=tag:todo"
 virtual-mailboxes   "Drafts"	    	    "notmuch://?query=tag:draft"
 virtual-mailboxes   "Flagged"	    	    "notmuch://?query=tag:flagged"
-virtual-mailboxes   "Junk"	    	    "notmuch://?query=tag:junk"
 virtual-mailboxes   "Sent"	    	    "notmuch://?query=tag:sent"
 
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag"
 virtual-mailboxes   "Contas"		    "notmuch://?query=tag:contas"
 virtual-mailboxes   "MMHP"	    	    "notmuch://?query=tag:mmhp"
-virtual-mailboxes   "To-Do"	    	    "notmuch://?query=tag:todo"
 virtual-mailboxes   "Unipac"	    	    "notmuch://?query=tag:unipac"
 
 named-mailboxes	    "  --- lists ---"	    "notmuch://?query=tag:emptylist"
 virtual-mailboxes   "neomutt"	    	    "notmuch://?query=tag:neomutt"
+virtual-mailboxes   "notmuch"	    	    "notmuch://?query=tag:notmuch"
 
-named-mailboxes	    "  ---------------"	    "notmuch://?query=tag:empty5"
-named-mailboxes	    "  --- folders ---"	    "notmuch://?query=tag:empty1"
-mailboxes	    +INBOX 
-mailboxes	    +Archive 
-# mailboxes	    +Drafts 
-mailboxes	    +Sent 
-mailboxes	    +Spam 
-# mailboxes 	    +Starred 
-mailboxes 	    +Trash
-named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag1"
-mailboxes	    +Labels.Contas 
-mailboxes	    +Labels.UNIPAC 
-named-mailboxes	    "  --- lists ---"	    "notmuch://?query=tag:list1"
-mailboxes	    +Folders.Listas.neomutt
+named-mailboxes	    "  ---- bin ----"	    "notmuch://?query=tag:emptybin"
+virtual-mailboxes   "Junk"	    	    "notmuch://?query=tag:junk"
+virtual-mailboxes   "Spam"	    	    "notmuch://?query=tag:spam"
+virtual-mailboxes   "Trash"	    	    "notmuch://?query=tag:deleted"
+
+# named-mailboxes	    "  ---------------"	    "notmuch://?query=tag:empty5"
+# named-mailboxes	    "  --- folders ---"	    "notmuch://?query=tag:empty1"
+# mailboxes	    +INBOX 
+# mailboxes	    +Archive 
+# # mailboxes	    -label drafty +Drafts 
+# mailboxes	    +Sent 
+# mailboxes	    +Spam 
+# # mailboxes 	    +Starred 
+# mailboxes	    -label Trashy +Trash 
+# named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag1"
+# mailboxes	    +Labels.Contas 
+# mailboxes	    +Labels.UNIPAC 
+# named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:list1"
+# mailboxes	    +Folders.Listas.neomutt
 
 # "INBOX"     "notmuch://?query=tag:inbox and NOT tag:archive "\
 # "Starred"   "notmuch://?query=tag:star"\
