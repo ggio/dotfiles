@@ -44,7 +44,7 @@ bind editor	    <Tab>	complete-query
 # bind index	    N		search-opposite		# Search back
 
 # Mailboxes mappings
-macro index,pager	gi	"<change-folder>INBOX<enter>"		"go to [i]nbox"
+macro index,pager	gi	"<change-folder>Inbox<enter>"		"go to [i]nbox"
 macro index,pager	Mi	";<save-message>=INBOX<enter>"		"move mail to inbox"
 macro index,pager   	Ci	";<copy-message>=INBOX<enter>"		"copy mail to inbox"
 
@@ -52,7 +52,7 @@ macro index,pager   	gd	"<change-folder>Drafts<enter>"		"go to [d]rafts"
 macro index,pager   	Md	";<save-message>=Drafts<enter>"		"move mail to drafts"
 macro index,pager   	Cd	";<copy-message>=Drafts<enter>"		"copy mail to drafts"
 
-macro index,pager   	gj	"<change-folder>=Junk<enter>"		"go to [j]unk"
+macro index,pager   	gj	"<change-folder>Junk<enter>"		"go to [j]unk"
 macro index,pager   	Mj	";<save-message>=Junk<enter>"		"move mail to junk"
 macro index,pager   	Cj	";<copy-message>=Junk<enter>"		"copy mail to junk"
 
