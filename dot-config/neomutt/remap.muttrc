@@ -87,6 +87,7 @@ macro index,pager   	gu	"<change-folder>Unipac<enter>"		"go to [u]nipac"
 macro index,pager   	gc	"<change-folder>Contas<enter>"		"go to [c]ontas"
 macro index,pager   	gr	"<change-folder>Unread<enter>"		"go to un[r]ead"
 macro index,pager   	go	"<change-folder>To-Do<enter>"		"go to T[o]-Do"
+macro index,pager   	gp	"<change-folder>MMHP<enter>"		"go to MMH[P]"
 macro index,pager   	gl	"<change-folder>^V ^V ---^V lists^V ---<enter>"	"go to [l]ists"
 
 # Notmuch mappings
@@ -117,8 +118,15 @@ macro index,pager .r "<modify-tags>-unread<enter>"	"tag as read"
 
 # deleted
 # Maybe append: <sync-mailbox><check-stats><enter>
-macro index,pager .d "<modify-tags-then-hide>+deleted -inbox -unread<enter> ;<save-message>=Trash<enter>" "Notmuch: delete"
-macro index,pager .u "<modify-tags-then-hide>-deleted +inbox +unread<enter> ;<save-message>=INBOX<enter>" "Notmuch: undelete"
+macro index,pager .d "<modify-tags-then-hide>+deleted -inbox -unread<enter>"	"tag as deleted"
+macro index,pager .u "<modify-tags-then-hide>-deleted +inbox +unread<enter>"	"untag as deleted"
+
+# macro index,pager .d "<modify-tags-then-hide>+deleted -inbox -unread <enter> ;<save-message>=Trash<enter>"   "Notmuch: delete"
+# macro index,pager .u "<modify-tags-then-hide>-deleted +inbox +unread<enter>;<save-message>=INBOX<enter>"   "Notmuch: undelete"
+
+# Sample from <https://github.com/neomutt/neomutt/issues/1736>
+# macro index d "<delete-message><modify-tags-then-hide>+deleted<enter>"
+# macro index u "<undelete-messsage><modify-tags-then-hide>-deleted<enter>"
 
 # junk
 macro index,pager .j "<modify-tags-then-hide>+junk -inbox -unread<enter>"	"tag as junk"

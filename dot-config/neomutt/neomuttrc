@@ -1,34 +1,37 @@
-# ===== Modules and paths ===== #
+# ===== Sourced files ===== #
 
-set mailcap_path =  ~/.config/neomutt/mailcap		# Handle different filetypes
 source		    ~/.config/neomutt/remap.muttrc			# Remap keybinding
-
-# Personal stuff
-
-set alias_file =    ~/.dotfiles.private/neomutt/aliases.muttrc 	# Where to store aliases
-source		    ~/.dotfiles.private/neomutt/aliases.muttrc			# Sourcing aliases
-source		    ~/.dotfiles.private/neomutt/personal.muttrc
+set alias_file =    ~/.dotfiles.private/neomutt/aliases.muttrc		# Aliases
+source		    ~/.dotfiles.private/neomutt/aliases.muttrc		# Sourcing aliases
+source		    ~/.dotfiles.private/neomutt/personal.muttrc		# My personal info
 
 # ===== Colors and style ===== #
 
 source		    ~/.config/neomutt/colors/gruvbox.muttrc
 # source	    ~/.config/neomutt/colors/dracula.muttrc
 
-# ===== Overall config ===== #
+# ===== Paths ===== #
 
-set folder = ~/Email/proton
+set folder = ~/Dropbox/.Mail/proton
+set tmp_dir = "~/Dropbox/.Mail/.tmp"
+set nm_default_url = "notmuch:///home/gregorio/Dropbox/.Mail/"		# Notmuch folder
+# Other paths to consider: isync, notmuch
+
+set mailcap_path =  ~/.config/neomutt/mailcap				# Handle different filetypes
+
+set postponed = "+Drafts"
+set record = "+Sent"
+set spoolfile = "Inbox"							# Directory to poll for new mail
+
+# ===== Overall config ===== #
 set mbox_type = Maildir
 set send_charset = "utf-8"
 set send_charset = "utf-8"
 set assumed_charset = "utf-8"
 set mail_check = 2	# seconds
-set postponed = "+Drafts"
-set tmp_dir = "~/Email/.tmp"
-set record = "+Sent"
-
 
 unset allow_8bit				# Produce correct MIME
-set include = yes					# Always include a copy when replying
+set include = yes				# Always include a copy when replying
 set editor = "nvim +':set textwidth=0'"		# Use nvim without textwidth
 set sort = threads				# Sort by threads
 set index_format = "%4C %Z %{%d %b} %-25.25L %s (%g)" # size: (%?l?%4l&%4c?)
@@ -53,7 +56,6 @@ set abort_noattach_regex = "\\<anex(|o|os|ado?)\\>"		# Search for the following 
 
 # ===== Notmuch ===== #
 
-set nm_default_url = "notmuch:///home/gregorio/Email/"		# path to the maildir
 set nm_query_type = "threads"
 set nm_record = yes
 set nm_record_tags = "sent"
@@ -92,15 +94,13 @@ set query_command= "abook --mutt-query '%s'"	# When looking for contacts, use th
 
 # ===== Mailboxes ===== #
 
-set spoolfile = "Inbox"	# Directory to poll for new mail
-
 named-mailboxes	    "  ---- main ----"	    "notmuch://?query=tag:emptymain"
 virtual-mailboxes   "Inbox"		    "notmuch://?query=tag:inbox"
 virtual-mailboxes   "Unread"	    	    "notmuch://?query=tag:unread"
 virtual-mailboxes   "To-Do"	    	    "notmuch://?query=tag:todo"
 virtual-mailboxes   "Drafts"	    	    "notmuch://?query=tag:draft"
 virtual-mailboxes   "Flagged"	    	    "notmuch://?query=tag:flagged"
-virtual-mailboxes   "Sent"	    	    "notmuch://?query=tag:sent"
+virtual-mailboxes   "Sent"	    	    "notmuch://?query=tag:sent NOT tag:deleted"
 
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag"
 virtual-mailboxes   "Contas"		    "notmuch://?query=tag:contas"
@@ -130,10 +130,3 @@ virtual-mailboxes   "Trash"	    	    "notmuch://?query=tag:deleted"
 # mailboxes	    +Labels.UNIPAC 
 # named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:list1"
 # mailboxes	    +Folders.Listas.neomutt
-
-# "INBOX"     "notmuch://?query=tag:inbox and NOT tag:archive "\
-# "Starred"   "notmuch://?query=tag:star"\
-# "Sent"      "notmuch://?query=tag:sent"\
-# virtual-mailboxes "Flagged"    "notmuch://?query=tag:flagged"
-
-

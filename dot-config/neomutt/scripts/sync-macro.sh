@@ -7,7 +7,7 @@ echo "Sync Macro:"
 echo ""
 echo "Running 'msbsync proton':"
 echo ""
-mbsync proton 
+mbsync proton
 
 echo ""
 echo "Running 'notmuch new':"

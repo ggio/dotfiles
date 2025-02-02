@@ -1,10 +1,11 @@
 return {
     {
         'yousefakbar/notmuch.nvim',
+        -- enabled = false,
         config = function()
             -- Configuration goes here
             local opts = {
-                notmuch_db_path = '$HOME/Email',
+                notmuch_db_path = '$HOME/Dropbox/.Mail',
                 maildir_sync_cmd = 'mbsync proton',
                 keymaps = {
                     sendmail = '<C-g><C-g>',
