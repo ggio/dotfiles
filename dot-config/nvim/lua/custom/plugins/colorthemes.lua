@@ -9,10 +9,15 @@ return {
         name = 'ayu',
         priority = 1000,
         init = function()
+            -- Functions non bold
             vim.g.gruvbox_baby_function_style = 'NONE'
+
+            -- Enable telescope theme
+            -- vim.g.gruvbox_baby_telescope_theme = 1
+
             vim.cmd.colorscheme 'gruvbox-baby'
-            --   -- You can configure highlights by doing something like:
-            vim.cmd.hi 'Comment gui=none'
+            -- You can configure highlights by doing something like:
+            -- vim.cmd.hi 'Comment gui=none'
         end,
     },
 }
