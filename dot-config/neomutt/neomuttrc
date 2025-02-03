@@ -60,7 +60,9 @@ set nm_query_type = "threads"
 set nm_record = yes
 set nm_record_tags = "sent"
 set nm_unread_tag = unread
+set nm_exclude_tags = "deleted,junk,spam"
 # set sendmail="/PATH/TO/bin/nm_sendmail"         # enables parsing of outgoing mail
+
 
 set hidden_tags = "unread,flagged,passed,replied,attachment,signed,encrypted"
 # Default hidden tags:
@@ -95,25 +97,26 @@ set query_command= "abook --mutt-query '%s'"	# When looking for contacts, use th
 # ===== Mailboxes ===== #
 
 named-mailboxes	    "  ---- main ----"	    "notmuch://?query=tag:emptymain"
-virtual-mailboxes   "Inbox"		    "notmuch://?query=tag:inbox NOT tag:deleted"
+virtual-mailboxes   "Inbox"		    "notmuch://?query=tag:inbox"
 virtual-mailboxes   "Unread"	    	    "notmuch://?query=tag:unread"
-virtual-mailboxes   "To-Do"	    	    "notmuch://?query=tag:todo NOT tag:deleted"
+virtual-mailboxes   "To-Do"	    	    "notmuch://?query=tag:todo"
 virtual-mailboxes   "Drafts"	    	    "notmuch://?query=tag:draft"
-virtual-mailboxes   "Flagged"	    	    "notmuch://?query=tag:flagged NOT tag:deleted"
-virtual-mailboxes   "Sent"	    	    "notmuch://?query=tag:sent NOT tag:deleted"
+virtual-mailboxes   "Flagged"	    	    "notmuch://?query=tag:flagged"
+virtual-mailboxes   "Sent"	    	    "notmuch://?query=tag:sent"
 
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag"
-virtual-mailboxes   "Contas"		    "notmuch://?query=tag:contas NOT tag:deleted"
-virtual-mailboxes   "MMHP"	    	    "notmuch://?query=tag:mmhp NOT tag:deleted"
-virtual-mailboxes   "Unipac"	    	    "notmuch://?query=tag:unipac NOT tag:deleted"
+virtual-mailboxes   "Contas"		    "notmuch://?query=tag:contas"
+virtual-mailboxes   "MMHP"	    	    "notmuch://?query=tag:mmhp"
+virtual-mailboxes   "Unipac"	    	    "notmuch://?query=tag:unipac"
+virtual-mailboxes   "Semester hub"    	    "notmuch://?query=tag:hub"
 
 named-mailboxes	    "  --- lists ---"	    "notmuch://?query=tag:emptylist"
-virtual-mailboxes   "neomutt"	    	    "notmuch://?query=tag:neomutt NOT tag:deleted"
-virtual-mailboxes   "notmuch"	    	    "notmuch://?query=tag:notmuch NOT tag:deleted"
+virtual-mailboxes   "neomutt"	    	    "notmuch://?query=tag:neomutt"
+virtual-mailboxes   "notmuch"	    	    "notmuch://?query=tag:notmuch"
 
 named-mailboxes	    "  ---- bin ----"	    "notmuch://?query=tag:emptybin"
-virtual-mailboxes   "Junk"	    	    "notmuch://?query=tag:junk NOT tag:deleted"
-virtual-mailboxes   "Spam"	    	    "notmuch://?query=tag:spam NOT tag:deleted"
+virtual-mailboxes   "Junk"	    	    "notmuch://?query=tag:junk"
+virtual-mailboxes   "Spam"	    	    "notmuch://?query=tag:spam"
 virtual-mailboxes   "Trash"	    	    "notmuch://?query=tag:deleted"
 
 # named-mailboxes	    "  ---------------"	    "notmuch://?query=tag:empty5"

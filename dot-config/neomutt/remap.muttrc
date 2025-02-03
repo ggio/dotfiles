@@ -88,6 +88,7 @@ macro index,pager   	gc	"<change-folder>Contas<enter>"		"go to [c]ontas"
 macro index,pager   	gr	"<change-folder>Unread<enter>"		"go to un[r]ead"
 macro index,pager   	go	"<change-folder>To-Do<enter>"		"go to T[o]-Do"
 macro index,pager   	gp	"<change-folder>MMHP<enter>"		"go to MMH[P]"
+macro index,pager   	gh	"<change-folder>Semester^V hub<enter>"	"go to Semester [h]ub"
 macro index,pager   	gl	"<change-folder>^V ^V ---^V lists^V ---<enter>"	"go to [l]ists"
 
 # Notmuch mappings

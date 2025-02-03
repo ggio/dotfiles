@@ -92,7 +92,7 @@ color tree          	color142 	default
 color underline     	color223 	color239
 
 # sidebar ------------ foreground ---- background -----------------------------
-color sidebar_divider    color250	default
+color sidebar_divider    color239	default
 color sidebar_new        color142	default
 color sidebar_highlight  color214	default
 # color sidebar_unread     color142 default
