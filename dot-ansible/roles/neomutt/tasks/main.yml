@@ -24,13 +24,6 @@
       - abook
     state: present
 
-- name: Install w3m (dnf)     # For html rendering
-  become: true
-  ansible.builtin.dnf:
-    name:
-      - w3m
-    state: present
-
 - name: Install isync (dnf)   # For receiving
   become: true
   ansible.builtin.dnf:
@@ -45,8 +38,22 @@
       - msmtp
     state: present
 
-- name: Create the maildir if it does not exist
+- name: Install sxiv (dnf)   # For sending
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - sxiv
+    state: present
+
+- name: Install w3m (dnf)     # For html rendering
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - w3m
+    state: present
+
+- name: Ensure maildir exists
   ansible.builtin.file:
-    path: ~/Email/proton
+    path: ~/.mail/proton
     state: directory
     mode: '0755'

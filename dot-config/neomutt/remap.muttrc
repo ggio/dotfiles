@@ -57,25 +57,31 @@ bind index,pager    B		sidebar-toggle-visible
 
 # ===== Notmuch mappings ===== #
 
-# GO-TOs
+# Folders handling
 
 macro index,pager	ga	"<change-folder>Archive<enter>"		"go to [a]rchive"
 macro index,pager	gc	"<change-folder>contas<enter>"		"go to [c]ontas"
 macro index,pager	gd	"<change-folder>drafts<enter>"		"go to [d]rafts"
 macro index,pager	gf	"<change-folder>flagged<enter>"		"go to [f]lagged"
 macro index,pager	gh	"<change-folder>semester^V hub<enter>"	"go to Semester [h]ub"
+macro index,pager	Ch	"<copy-message>=Labels.Semester_hub<enter>"	"copy to Semester [h]ub"
 macro index,pager	gi	"<change-folder>Inbox<enter>"		"go to [i]nbox"
-macro index,pager   	Mi	";<save-message>=INBOX<enter>"	"move mail to junk"
+macro index,pager   	Ci	";<copy-message>=INBOX<enter>"		"copy mail to inbox"
+macro index,pager   	Mi	";<save-message>=INBOX<enter>"		"move mail to inbox"
 macro index,pager	gj	"<change-folder>junk<enter>"		"go to [j]unk"
+macro index,pager   	Cj	";<copy-message>=Labels.Junk<enter>"	"copy mail to junk"
 macro index,pager   	Mj	";<save-message>=Labels.Junk<enter>"	"move mail to junk"
 macro index,pager	gl	"<change-folder>^V ^V ---^V lists^V ---<enter>"	"go to [l]ists"
 macro index,pager	gm	"<change-folder>spam<enter>"		"go to spa[m]"
+macro index,pager   	Cm	";<copy-message>=Spam<enter>"		"copy mail to spam"
 macro index,pager   	Mm	";<save-message>=Spam<enter>"		"move mail to spam"
 macro index,pager	go	"<change-folder>to-do<enter>"		"go to T[o]-Do"
+macro index,pager	Co	"<copy-message>=Labels.To-Do<enter>"	"copy to To-Do"
 macro index,pager	gp	"<change-folder>mmhp<enter>"		"go to MMH[P]"
 macro index,pager	gr	"<change-folder>unread<enter>"		"go to un[r]ead"
 macro index,pager	gs	"<change-vfolder>sent<enter>"		"go to [s]ent"
 macro index,pager	gt	"<change-folder>trash<enter>"		"go to [t]rash"
+macro index,pager   	Ct	";<copy-message>=Trash<enter>"		"copy mail to trash"
 macro index,pager   	Mt	";<save-message>=Trash<enter>"		"move mail to trash"
 macro index,pager	gu	"<change-folder>unipac<enter>"		"go to [u]nipac"
 
