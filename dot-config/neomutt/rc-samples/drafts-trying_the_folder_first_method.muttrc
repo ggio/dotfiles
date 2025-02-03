@@ -1,0 +1,75 @@
+# ===== Notmuch mappings ===== #
+
+# GO-TOs
+
+macro index,pager	ga	"<change-folder>Archive<enter>"		"go to [a]rchive"
+macro index,pager	gc	"<change-folder>Contas<enter>"		"go to [c]ontas"
+macro index,pager	gd	"<change-folder>Drafts<enter>"		"go to [d]rafts"
+macro index,pager	gf	"<change-folder>Flagged<enter>"		"go to [f]flagged"
+macro index,pager	gh	"<change-folder>Semester^V hub<enter>"	"go to Semester [h]ub"
+macro index,pager	gi	"<change-folder>Inbox<enter>"		"go to [i]nbox"
+macro index,pager	gj	"<change-folder>Junk<enter>"		"go to [j]unk"
+macro index,pager	gl	"<change-folder>^V ^V ---^V lists^V ---<enter>"	"go to [l]ists"
+macro index,pager	gm	"<change-folder>Spam<enter>"		"go to spa[m]"
+macro index,pager	go	"<change-folder>To-Do<enter>"		"go to T[o]-Do"
+macro index,pager	gp	"<change-folder>MMHP<enter>"		"go to MMH[P]"
+macro index,pager	gr	"<change-folder>Unread<enter>"		"go to un[r]ead"
+macro index,pager	gs	"<change-folder>Sent<enter>"		"go to [s]ent"
+macro index,pager	gt	"<change-folder>Trash<enter>"		"go to [t]rash"
+macro index,pager	gu	"<change-folder>Unipac<enter>"		"go to [u]nipac"
+
+# General
+
+macro index		\\\\    "<vfolder-from-query>"			"looks up a hand made query"
+bind index,pager .. modify-labels					# Manualy modify tags
+
+# Folders and tags handling
+
+# inbox
+macro index,pager .i ";<save-message>=INBOX<enter>"		    "tag as inbox"
+macro index,pager .I "<modify-tags>-inbox<enter>"		    "untag as inbox"
+
+# (un)read
+macro index,pager .r "<modify-tags>-unread<enter>"		    "tag as read"
+
+# todo
+macro index,pager .o ";<copy-message>=Labels.To-Do<enter>"	    "tag as todo"
+macro index,pager .O ";<save-message>=INBOX<enter>"		    "untag as todo"
+
+# drafts
+
+# flagged
+macro index,pager .f ";<save-message>=Starred<enter>"		    "tag as flagged"
+macro index,pager .F ";<save-message>=INBOX<enter>"		    "untag as flagged"
+
+# sent
+
+# contas
+macro index,pager .c ";<save-message>=Labels.Contas<enter>"	    "tag as contas"
+macro index,pager .C ";<save-message>=INBOX<enter>"		    "untag as contas"
+
+# mmhp
+macro index,pager .p ";<save-message>=Labels.MMHP<enter>"	    "tag as mmhp"
+macro index,pager .P ";<save-message>=INBOX<enter>"		    "untag as mmhp"
+
+
+# unipac
+macro index,pager .u ";<save-message>=Labels.Unipac<enter>"	    "tag as unipac"
+macro index,pager .U ";<save-message>=INBOX<enter>"		    "untag as unipac"
+
+# semester hub
+macro index,pager .h ";<save-message>=Labels.Semester_hub<enter>"   "tag as hub"
+macro index,pager .H ";<save-message>=INBOX<enter>"		    "untag as hub"
+
+# BIN
+# junk
+macro index,pager .j ";<save-message>=Labels.Junk<enter>"	    "tag as junk"
+macro index,pager .J ";<save-message>=INBOX<enter>"		    "untag as junk"
+
+# spam
+macro index,pager .m ";<save-message>=Spam<enter>"		    "tag as spam"
+macro index,pager .M ";<save-message>=INBOX<enter>"		    "untag as spam"
+
+# trash
+macro index,pager .d ";<save-message>=Trash<enter>"		    "tag as deleted"
+macro index,pager .u ";<save-message>=INBOX<enter>"		    "untag as deleted"

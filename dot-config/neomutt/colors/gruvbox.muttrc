@@ -48,17 +48,17 @@ color index_subject	color142	default 	~N # new messages
 color index_flags	color175	default 	~Q # quoted messages 
 color index_subject	color175	default 	~Q # quoted messages 
 
-# color index_date	color111	default 	~F # flagged messages
-color index_flags	brightcolor111	default 	~F # flagged messages
-# color index_number	color111	default 	~F # flagged messages
-color index_subject	color111	default 	~F # flagged messages
+# color index_date	color208	default 	~F # flagged messages
+color index_flags	brightcolor208	default 	~F # flagged messages
+# color index_number	color208	default 	~F # flagged messages
+color index_subject	color208	default 	~F # flagged messages
 
-color index		brightcolor237	color222 	~T # tagged messages
-color index_author	brightcolor237	default 	~T # tagged messages
-color index_date	brightcolor237	default 	~T # tagged messages
-color index_flags	brightcolor237	default 	~T # tagged messages
-color index_number	brightcolor237	default 	~T # tagged messages
-color index_subject	brightcolor237	default 	~T # tagged messages
+color index		color214	color234  	~T # tagged messages
+color index_author	color214	default 	~T # tagged messages
+color index_date	color214	default 	~T # tagged messages
+color index_flags	color214	default 	~T # tagged messages
+color index_number	color214	default 	~T # tagged messages
+color index_subject	color214	default 	~T # tagged messages
 
 color index_flags	color141	default		~v # messages part of a collapsed thread
 color index_subject	color141	default		~v # messages part of a collapsed thread
@@ -74,7 +74,7 @@ color attachment	color228	color235
 color bold          	color229	color235
 color error         	color167	color235
 color hdrdefault    	color246	color235
-color indicator     	color208	color237
+color indicator     	default		color237
 color markers       	color243	color235
 color message		cyan		default
 color normal        	color223 	color235

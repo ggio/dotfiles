@@ -14,14 +14,13 @@ source		    ~/.config/neomutt/colors/gruvbox.muttrc
 
 set folder = ~/.mail/proton
 set tmp_dir = "~/.mail/.tmp"
-set nm_default_url = "notmuch:///home/gregorio/.mail/"		# Notmuch folder
+set nm_default_url = "notmuch:///home/gregorio/.mail/"	# Notmuch folder
 # Other paths to consider: isync, notmuch
 
-set mailcap_path =  ~/.config/neomutt/mailcap				# Handle different filetypes
-
+set mailcap_path =  ~/.config/neomutt/mailcap		# Handle different filetypes
 set postponed = "+Drafts"
 set record = "+Sent"
-set spoolfile = "Inbox"							# Directory to poll for new mail
+set spoolfile = "Inbox"			# Directory to poll for new mail
 
 # ===== Overall config ===== #
 set mbox_type = Maildir
@@ -98,38 +97,40 @@ set query_command= "abook --mutt-query '%s'"	# When looking for contacts, use th
 
 named-mailboxes	    "  ---- main ----"	    "notmuch://?query=tag:emptymain"
 virtual-mailboxes   "Inbox"		    "notmuch://?query=tag:inbox"
-virtual-mailboxes   "Unread"	    	    "notmuch://?query=tag:unread"
-virtual-mailboxes   "To-Do"	    	    "notmuch://?query=tag:todo"
-virtual-mailboxes   "Drafts"	    	    "notmuch://?query=tag:draft"
-virtual-mailboxes   "Flagged"	    	    "notmuch://?query=tag:flagged"
-virtual-mailboxes   "Sent"	    	    "notmuch://?query=tag:sent"
+virtual-mailboxes   "unread"	    	    "notmuch://?query=tag:unread"
+virtual-mailboxes   "to-do"	    	    "notmuch://?query=tag:todo"
+virtual-mailboxes   "drafts"	    	    "notmuch://?query=tag:draft"
+virtual-mailboxes   "flagged"    	    "notmuch://?query=tag:flagged"
+virtual-mailboxes   "sent"	    	    "notmuch://?query=tag:sent"
 
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag"
-virtual-mailboxes   "Contas"		    "notmuch://?query=tag:contas"
-virtual-mailboxes   "MMHP"	    	    "notmuch://?query=tag:mmhp"
-virtual-mailboxes   "Unipac"	    	    "notmuch://?query=tag:unipac"
-virtual-mailboxes   "Semester hub"    	    "notmuch://?query=tag:hub"
+virtual-mailboxes   "contas"		    "notmuch://?query=tag:contas"
+virtual-mailboxes   "mmhp"	    	    "notmuch://?query=tag:mmhp"
+virtual-mailboxes   "unipac"	    	    "notmuch://?query=tag:unipac"
+virtual-mailboxes   "semester hub"    	    "notmuch://?query=tag:hub"
 
 named-mailboxes	    "  --- lists ---"	    "notmuch://?query=tag:emptylist"
 virtual-mailboxes   "neomutt"	    	    "notmuch://?query=tag:neomutt"
 virtual-mailboxes   "notmuch"	    	    "notmuch://?query=tag:notmuch"
 
 named-mailboxes	    "  ---- bin ----"	    "notmuch://?query=tag:emptybin"
-virtual-mailboxes   "Junk"	    	    "notmuch://?query=tag:junk"
-virtual-mailboxes   "Spam"	    	    "notmuch://?query=tag:spam"
-virtual-mailboxes   "Trash"	    	    "notmuch://?query=tag:deleted"
+virtual-mailboxes   "junk"	    	    "notmuch://?query=tag:junk"
+virtual-mailboxes   "spam"	    	    "notmuch://?query=tag:spam"
+virtual-mailboxes   "trash"	    	    "notmuch://?query=tag:deleted"
 
 # named-mailboxes	    "  ---------------"	    "notmuch://?query=tag:empty5"
 # named-mailboxes	    "  --- folders ---"	    "notmuch://?query=tag:empty1"
 # mailboxes	    +INBOX 
 # mailboxes	    +Archive 
-# # mailboxes	    -label drafty +Drafts 
+# mailboxes	    +Labels.To-Do 
+# mailboxes	    -label drafty +Drafts 
 # mailboxes	    +Sent 
 # mailboxes	    +Spam 
-# # mailboxes 	    +Starred 
+# mailboxes 	    +Starred 
 # mailboxes	    -label Trashy +Trash 
 # named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag1"
 # mailboxes	    +Labels.Contas 
-# mailboxes	    +Labels.UNIPAC 
+# mailboxes	    +Labels.Unipac 
 # named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:list1"
 # mailboxes	    +Folders.Listas.neomutt
+# mailboxes	    +Folders.Listas.notmuch

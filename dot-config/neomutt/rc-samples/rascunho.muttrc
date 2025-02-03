@@ -1,0 +1,107 @@
+# ===== Notmuch mappings ===== #
+
+macro index,pager	gi	"<change-folder>Inbox<enter>"		"go to [i]nbox"
+macro index,pager	Mi	";<save-message>=INBOX<enter>"		"move mail to inbox"
+# macro index,pager   	Ci	";<copy-message>=INBOX<enter>"		"copy mail to inbox"
+
+macro index,pager   	gd	"<change-folder>Drafts<enter>"		"go to [d]rafts"
+# macro index,pager   	Md	";<save-message>=Drafts<enter>"		"move mail to drafts"
+# macro index,pager   	Cd	";<copy-message>=Drafts<enter>"		"copy mail to drafts"
+
+macro index,pager   	gj	"<change-folder>Junk<enter>"		"go to [j]unk"
+# macro index,pager   	Mj	";<save-message>=Junk<enter>"		"move mail to junk"
+# macro index,pager   	Cj	";<copy-message>=Junk<enter>"		"copy mail to junk"
+
+macro index,pager   	gt	"<change-folder>Trash<enter>"		"go to [t]rash"
+macro index,pager   	Mt	";<save-message>=Trash<enter>"		"move mail to trash"
+# macro index,pager   	Ct	";<copy-message>=Trash<enter>"		"copy mail to trash"
+
+macro index,pager   	gs	"<change-folder>Sent<enter>"		"go to [s]ent"
+# macro index,pager   	Ms	";<save-message>=Sent<enter>"		"move mail to sent"
+# macro index,pager   	Cs	";<copy-message>=Sent<enter>"		"copy mail to sent"
+
+macro index,pager   	ga	"<change-folder>Archive<enter>"		"go to [a]rchive"
+# macro index,pager   	Ma	";<save-message>=Archive<enter>"	"move mail to archive"
+# macro index,pager   	Ca	";<copy-message>=Archive<enter>"	"copy mail to archive"
+
+macro index,pager   	g*	"<change-folder>=Starred<enter>"	"go to [*]starred"
+# macro index,pager   	M*	";<save-message>=Starred<enter>"	"move mail to starred"
+# macro index,pager   	C*	";<copy-message>=Starred<enter>"	"copy mail to starred"
+macro index,pager   	gf	"<change-folder>Flagged<enter>"		"go to [f]flagged"
+# macro index,pager   	Cf	";<copy-message>=Starred<enter>"	"copy mail to [f]flagged"
+
+macro index,pager   	gm	"<change-folder>Spam<enter>"		"go to spa[m]"
+# macro index,pager   	Mm	";<save-message>=Spam<enter>"		"move mail to spa[m]"
+# macro index,pager   	Cm	";<copy-message>=Spam<enter>"		"copy mail to spa[m]"
+
+macro index,pager   	gu	"<change-folder>Unipac<enter>"		"go to [u]nipac"
+# macro index,pager   	Mu	";<save-message>=Labels.UNIPAC<enter>"	"move mail to [u]nipac"
+# macro index,pager   	Cu	";<copy-message>=Labels.UNIPAC<enter>"	"copy mail to [u]nipac"
+
+macro index,pager   	gc	"<change-folder>Contas<enter>"		"go to [c]ontas"
+macro index,pager   	gr	"<change-folder>Unread<enter>"		"go to un[r]ead"
+macro index,pager   	go	"<change-folder>To-Do<enter>"		"go to T[o]-Do"
+macro index,pager   	gp	"<change-folder>MMHP<enter>"		"go to MMH[P]"
+macro index,pager   	gh	"<change-folder>Semester^V hub<enter>"	"go to Semester [h]ub"
+macro index,pager   	gl	"<change-folder>^V ^V ---^V lists^V ---<enter>"	"go to [l]ists"
+
+# ===== My Notmuch mappings ===== #
+
+macro index	    \\\\	"<vfolder-from-query>"	    		               "looks up a hand made query"
+bind index,pager .. modify-labels	# Manualy modify tags
+
+# inbox
+macro index,pager .i "<modify-tags>+inbox<enter>"	"tag as inbox"
+macro index,pager .I "<modify-tags>-inbox<enter>"	"untag as inbox"
+
+# (un)read
+macro index,pager .r "<modify-tags>-unread<enter>"	"tag as read"
+
+# todo
+macro index,pager .o "<modify-tags>+todo<enter>"	"tag as todo"
+macro index,pager .O "<modify-tags>-todo<enter>"	"untag as todo"
+
+# drafts
+# flagged
+macro index,pager .f "<modify-tags>+flagged<enter>"	"tag as flagged"
+macro index,pager .F "<modify-tags>-flagged<enter>"	"untag as flagged"
+# sent
+
+# contas
+# mmhp
+
+
+# unipac
+macro index,pager .u ";<save-message>=Labels.Unipac<enter>"	    "tag as unipac"
+macro index,pager .U ";<save-message>=INBOX<enter>"		    "untag as unipac"
+
+# semester hub
+macro index,pager .h ";<save-message>=Labels.Semester_hub<enter>"   "tag as hub"
+macro index,pager .H ";<save-message>=INBOX<enter>"		    "untag as hub"
+
+# BIN
+# junk
+macro index,pager .j ";<save-message>=Labels.Junk<enter>"	    "tag as junk"
+macro index,pager .J ";<save-message>=INBOX<enter>"		    "untag as junk"
+
+# spam
+macro index,pager .m ";<save-message>=Spam<enter>"		    "tag as spam"
+macro index,pager .M ";<save-message>=INBOX<enter>"		    "untag as spam"
+
+# trash
+macro index,pager .d ";<save-message>=Trash<enter>"		    "tag as deleted"
+macro index,pager .u ";<save-message>=INBOX<enter>"		    "untag as deleted"
+
+# Rascunhos
+
+# deleted
+# Maybe append: <sync-mailbox><check-stats><enter>
+# macro index,pager .d "<modify-tags-then-hide>+deleted -inbox -unread<enter>"	"tag as deleted"
+# macro index,pager .u "<modify-tags-then-hide>-deleted +inbox <enter>"	"untag as deleted"
+#
+# macro index,pager .d ": unset resolve\n <modify-tags-then-hide>+deleted -inbox -unread<enter> ;<save-message>=Trash<enter> \n: set resolve\n"   "Notmuch: delete"
+# macro index,pager .u ": unset resolve\n <modify-tags-then-hide>-deleted +inbox <enter> ;<save-message>=INBOX<enter> \n: set resolve\n"   "Notmuch: undelete"
+#
+# # spam
+# macro index,pager .m "<modify-tags-then-hide>+spam -inbox -unread<enter>"	"tag as spam"
+# macro index,pager .M "<modify-tags-then-hide>-spam +inbox +unread<enter>"	"untag as spam"
