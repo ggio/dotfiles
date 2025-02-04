@@ -122,19 +122,20 @@ virtual-mailboxes   "junk"	    	    "notmuch://?query=tag:junk"
 virtual-mailboxes   "spam"	    	    "notmuch://?query=tag:spam"
 virtual-mailboxes   "trash"	    	    "notmuch://?query=tag:deleted"
 
-# named-mailboxes	    "  ---------------"	    "notmuch://?query=tag:empty5"
+named-mailboxes	    "  ---- debug ----"	    "notmuch://?query=tag:empty5"
 # named-mailboxes	    "  --- folders ---"	    "notmuch://?query=tag:empty1"
-# mailboxes	    +INBOX 
+mailboxes	    +INBOX 
 # mailboxes	    +Archive 
-# mailboxes	    +Labels.To-Do 
+mailboxes	    +Labels.To-Do 
 # mailboxes	    -label drafty +Drafts 
 # mailboxes	    +Sent 
 # mailboxes	    +Spam 
 # mailboxes 	    +Starred 
-# mailboxes	    -label Trashy +Trash 
+mailboxes	    -label Trashy +Trash 
 # named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag1"
 # mailboxes	    +Labels.Contas 
 # mailboxes	    +Labels.Unipac 
+mailboxes	    +Labels.Semester_hub
 # named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:list1"
 # mailboxes	    +Folders.Listas.neomutt
 # mailboxes	    +Folders.Listas.notmuch
