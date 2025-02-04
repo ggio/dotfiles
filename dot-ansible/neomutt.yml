@@ -1,0 +1,13 @@
+---
+# All-in-one setup playbook for my Fedora workstations
+
+- name: Manage dotfiles
+  hosts: localhost
+  roles:
+    - dotfiles                  # Config files managament with stow
+
+- name: Install Neomutt and related packages
+  hosts: localhost
+  roles:
+    - neomutt                   # Install NeoMutt and its ecosystem
+

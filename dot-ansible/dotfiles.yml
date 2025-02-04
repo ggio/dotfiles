@@ -1,0 +1,6 @@
+---
+- name: Manage dotfiles
+  hosts: localhost
+  roles:
+    - dotfiles                  # Config files managament with stow
+

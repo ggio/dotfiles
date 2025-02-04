@@ -35,10 +35,9 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- Turn off spellcheck per filetype
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'lua', 'markdown' },
+    pattern = { 'lua', 'markdown', 'yml', 'yaml', 'py' },
     callback = function()
         vim.opt_local.spell = false
-        -- vim.opt_local.ltex.enabled = false
     end,
 })
 ---- Custom colorscheme for .lua files

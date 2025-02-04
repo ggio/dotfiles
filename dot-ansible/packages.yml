@@ -1,0 +1,7 @@
+---
+- name: Install overall packages
+  hosts: localhost
+  roles:
+    - packages                  # Install packages with dnf and flatpak
+    - msfonts                   # Install MS fonts from mscorefonts2
+
