@@ -19,6 +19,12 @@ local options = {
     -- Decrease update time
     updatetime = 250,
 
+    -- Turn on spellchecker
+    spell = true,
+
+    -- sets spelling dictionary
+    spelllang = { 'pt_br' },
+
     ------------ APPEARANCE ------------
 
     -- Show which line your cursor is on

@@ -247,10 +247,12 @@ return {
                 -- ts_ls = {},
                 --
                 ltex = {
+                    filetypes = { 'latex', 'plaintex', 'tex' },
                     settings = {
                         ltex = {
+                            enabled = { 'latex', 'plaintex', 'tex' },
                             language = 'pt-BR',
-                            checkFrequency = 'edit',
+                            checkFrequency = 'save',
                         },
                     },
                 },

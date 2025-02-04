@@ -90,6 +90,22 @@ vim.keymap.set(
     { desc = 'Move focus to the upper window' }
 )
 
+-- Spelling
+vim.keymap.set('n', '<C-s>', function()
+    require('telescope.builtin').spell_suggest(
+        require('telescope.themes').get_cursor {
+            previewer = false,
+            layout_config = {
+                width = 50,
+                height = 15,
+            },
+        }
+    )
+end, { remap = true })
+
+-- vim.keymap.set("n", "<C-s>", "z=", { remap = true})
+-- keymap("n", "<C-s>", "<cmd>Telescope spell_suggest<cr>", { remap = true})
+
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
