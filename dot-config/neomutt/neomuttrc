@@ -109,6 +109,10 @@ virtual-mailboxes   "mmhp"	    	    "notmuch://?query=tag:mmhp"
 virtual-mailboxes   "unipac"	    	    "notmuch://?query=tag:unipac"
 virtual-mailboxes   "semester hub"    	    "notmuch://?query=tag:hub"
 
+named-mailboxes	    "  --- minor ---"	    "notmuch://?query=tag:emptyminor"
+virtual-mailboxes   "compras"		    "notmuch://?query=tag:compras"
+virtual-mailboxes   "vet"		    "notmuch://?query=tag:vet"
+
 named-mailboxes	    "  --- lists ---"	    "notmuch://?query=tag:emptylist"
 virtual-mailboxes   "neomutt"	    	    "notmuch://?query=tag:neomutt"
 virtual-mailboxes   "notmuch"	    	    "notmuch://?query=tag:notmuch"

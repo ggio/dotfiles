@@ -61,6 +61,7 @@ bind index,pager    B		sidebar-toggle-visible
 
 macro index,pager	ga	"<change-folder>Archive<enter>"		"go to [a]rchive"
 macro index,pager	gc	"<change-folder>contas<enter>"		"go to [c]ontas"
+macro index,pager	gC	"<change-folder>compras<enter>"		"go to [C]compras"
 macro index,pager	gd	"<change-folder>drafts<enter>"		"go to [d]rafts"
 macro index,pager	gf	"<change-folder>flagged<enter>"		"go to [f]lagged"
 macro index,pager	gh	"<change-folder>semester^V hub<enter>"	"go to Semester [h]ub"

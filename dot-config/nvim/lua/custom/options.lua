@@ -19,8 +19,9 @@ local options = {
     -- Decrease update time
     updatetime = 250,
 
-    -- Turn on spellchecker
-    spell = true,
+    -- Togle spellchecker
+    -- (false for almost everything, autocmd.lua set it on for some filetypes)
+    spell = false,
 
     -- sets spelling dictionary
     spelllang = { 'pt_br' },
