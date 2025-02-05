@@ -101,8 +101,8 @@ macro index,pager .I ";<modify-tags>-inbox<enter>"		    "untag as inbox"
 macro index,pager .r ";<modify-tags>-unread<enter>"		    "tag as read"
 
 # todo
-macro index,pager .o "<enter-command>unset resolve<enter><tag-prefix><modify-labels>+todo<enter><enter-command>set resolve<enter><tag-prefix><save-message>=Labels.To-Do<enter>" "tag as todo"
-macro index,pager .O "<enter-command>unset resolve<enter><tag-prefix><modify-labels>-todo<enter><enter-command>set resolve<enter><tag-prefix><save-message>=INBOX<enter>" "untag as todo"
+macro index,pager .o ";<modify-tags>+todo<enter>"		    "tag as todo"
+macro index,pager .O ";<modify-tags>-todo<enter>"		    "untag as todo"
 
 # drafts
 macro index,pager .d ";<modify-tags>+draft -inbox<enter>"	    "tag as draft"
@@ -127,8 +127,8 @@ macro index,pager .u ";<modify-tags>+unipac<enter>"		    "tag as unipac"
 macro index,pager .U ";<modify-tags>-unipac<enter>"		    "untag as unipac"
 
 # semester hub
-macro index,pager .h "<enter-command>unset resolve<enter><tag-prefix><modify-labels>+hub<enter><enter-command>set resolve<enter><tag-prefix><save-message>=Labels.Semester_hub<enter>" "tag as hub"
-macro index,pager .H "<enter-command>unset resolve<enter><tag-prefix><modify-labels>-hub<enter><enter-command>set resolve<enter><tag-prefix><save-message>=INBOX<enter>" "untag as hub"
+macro index,pager .h ";<modify-tags>+hub<enter>"		    "tag as hub"
+macro index,pager .H ";<modify-tags>-hub<enter>"		    "untag as hub"
 
 # BIN
 # junk
@@ -140,8 +140,8 @@ macro index,pager .m ";<modify-tags>+spam -inbox -unread<enter>"    "tag as spam
 macro index,pager .M ";<modify-tags>-spam +inbox<enter>"	    "untag as spam"
 
 # trash
-macro index,pager .d "<enter-command>unset resolve<enter><tag-prefix><modify-labels-then-hide>+deleted -inbox -unread<enter><enter-command>set resolve<enter><tag-prefix><save-message>=Trash<enter>" "delete message"
-macro index,pager .u "<enter-command>unset resolve<enter><tag-prefix><modify-labels-then-hide>-deleted +inbox<enter><enter-command>set resolve<enter><tag-prefix><save-message>=INBOX<enter>" "undelete message"
+macro index,pager .d ";<modify-tags>+deleted -inbox -unread<enter>"	"tag as deleted"
+macro index,pager .u ";<modify-tags>-deleted +inbox<enter>"		"untag as deleted"
 
 # ===== Macros ===== #
 
