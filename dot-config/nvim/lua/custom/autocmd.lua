@@ -15,16 +15,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
--- Custom tabstop and colorscheme for .tex files
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'tex' },
-    callback = function()
-        vim.opt_local.tabstop = 4
-        vim.cmd 'colorscheme gruvbox-material'
-    end,
-})
-
--- Create symmetrical pairs only in markdown files
+-- Markdown files: create symmetrical pairs
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'markdown',
     callback = function()
@@ -33,13 +24,24 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
--- Turn spellcheck on per filetype
+-- Latex files: spell, tabs and colors
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'tex', 'latex', 'plaintex' },
     callback = function()
         vim.opt_local.spell = true
+        vim.opt_local.tabstop = 4
+        vim.cmd 'colorscheme gruvbox-material'
     end,
 })
+
+-- CSV files: turn textwidth off
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'csv', 'csv_comma' },
+    callback = function()
+        vim.opt_local.textwidth = 0
+    end,
+})
+
 ---- Custom colorscheme for .lua files
 --vim.api.nvim_create_autocmd('FileType', {
 --    pattern = { 'lua' },

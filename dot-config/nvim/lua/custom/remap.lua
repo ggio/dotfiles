@@ -12,7 +12,7 @@ vim.keymap.set(
     { desc = '[Tab] Open terminal in a new split' }
 )
 
--- Navigate between buffers
+-- Navigate to the next buffer
 vim.keymap.set(
     'n',
     '<A-l>',
@@ -20,6 +20,7 @@ vim.keymap.set(
     { desc = '[Alt-l] Go to next Buffer' }
 )
 
+-- Navigate to the prev buffer
 vim.keymap.set(
     'n',
     '<A-h>',

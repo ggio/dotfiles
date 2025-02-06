@@ -5,6 +5,7 @@ return {
         ft = {
             'csv',
             'tsv',
+            'csv_comma',
             'csv_semicolon',
             'csv_whitespace',
             'csv_pipe',

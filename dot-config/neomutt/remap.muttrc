@@ -85,6 +85,7 @@ macro index,pager	gt	"<change-folder>trash<enter>"		"go to [t]rash"
 macro index,pager   	Ct	";<copy-message>=Trash<enter>"		"copy mail to trash"
 macro index,pager   	Mt	";<save-message>=Trash<enter>"		"move mail to trash"
 macro index,pager	gu	"<change-folder>unipac<enter>"		"go to [u]nipac"
+macro index,pager	gv	"<change-folder>vet<enter>"		"go to [u]nipac"
 
 # General
 
@@ -130,7 +131,15 @@ macro index,pager .U ";<modify-tags>-unipac<enter>"		    "untag as unipac"
 macro index,pager .h ";<modify-tags>+hub<enter>"		    "tag as hub"
 macro index,pager .H ";<modify-tags>-hub<enter>"		    "untag as hub"
 
+# vet
+macro index,pager .v ";<modify-tags>+vet<enter>"		    "tag as unipac"
+macro index,pager .V ";<modify-tags>-vet<enter>"		    "untag as unipac"
+
 # BIN
+# trash
+macro index,pager .d ";<modify-tags>+deleted -inbox -unread<enter>"	"tag as deleted"
+macro index,pager .u ";<modify-tags>-deleted +inbox<enter>"		"untag as deleted"
+
 # junk
 macro index,pager .j ";<modify-tags>+junk -inbox -unread<enter>"    "tag as junk"
 macro index,pager .J ";<modify-tags>-junk +inbox<enter>"	    "untag as junk"
@@ -138,10 +147,6 @@ macro index,pager .J ";<modify-tags>-junk +inbox<enter>"	    "untag as junk"
 # spam
 macro index,pager .m ";<modify-tags>+spam -inbox -unread<enter>"    "tag as spam"
 macro index,pager .M ";<modify-tags>-spam +inbox<enter>"	    "untag as spam"
-
-# trash
-macro index,pager .d ";<modify-tags>+deleted -inbox -unread<enter>"	"tag as deleted"
-macro index,pager .u ";<modify-tags>-deleted +inbox<enter>"		"untag as deleted"
 
 # ===== Macros ===== #
 

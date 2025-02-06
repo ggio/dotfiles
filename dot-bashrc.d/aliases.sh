@@ -10,8 +10,9 @@ alias amc='sudo x11docker -I --clipboard --backend=docker --nxagent --home --sha
 alias amcd='sudo systemctl start docker && sudo x11docker -I --clipboard --backend=docker --nxagent --home --share $HOME amc_dev auto-multiple-choice'
 
 # Directories shortcuts
+alias cd50='cd ~/Dropbox/PROFISSIONAL/TECH/Estudos/CS50/devcontainer/'
 alias docdir='cd ~/Dropbox/ACADEMICO/DOUTORADO/ESCRITAS/'
-alias cd50='cd ~/Dropbox/PROFISSIONAL/TECH/CS50/devcontainer/'
+alias confdir='cd ~/.config'
 alias techdir='cd ~/Dropbox/UTILIDADES/tech/linux'
 alias utildir='cd ~/Dropbox/UTILIDADES/'
 
