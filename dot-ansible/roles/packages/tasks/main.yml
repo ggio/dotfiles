@@ -46,6 +46,13 @@
       - keepassxc
     state: present
 
+- name: Install libheif-freeworld (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - libheif-freeworld
+    state: present
+
 - name: Install mpv (dnf)
   become: true
   ansible.builtin.dnf:
