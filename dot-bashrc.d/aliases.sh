@@ -12,6 +12,7 @@ alias amcd='sudo systemctl start docker && sudo x11docker -I --clipboard --backe
 # Directories shortcuts
 alias cd50='cd ~/Dropbox/PROFISSIONAL/TECH/Estudos/CS50/devcontainer/'
 alias docdir='cd ~/Dropbox/ACADEMICO/DOUTORADO/ESCRITAS/'
+alias unipacdir='cd ~/Dropbox/PROFISSIONAL/DOCENCIA'
 alias confdir='cd ~/.config'
 alias techdir='cd ~/Dropbox/UTILIDADES/tech/linux'
 alias utildir='cd ~/Dropbox/UTILIDADES/'

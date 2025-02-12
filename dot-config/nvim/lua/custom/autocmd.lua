@@ -19,8 +19,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'markdown',
     callback = function()
-        MiniPairs.map_buf(0, 'i', '*', { action = 'closeopen', pair = '**' })
-        MiniPairs.map_buf(0, 'i', '_', { action = 'closeopen', pair = '__' })
+        vim.opt_local.textwidth = 80
+        -- MiniPairs.map_buf(0, 'i', '*', { action = 'closeopen', pair = '**' })
+        -- MiniPairs.map_buf(0, 'i', '_', { action = 'closeopen', pair = '__' })
     end,
 })
 
@@ -28,19 +29,20 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'tex', 'latex', 'plaintex' },
     callback = function()
+        vim.cmd 'colorscheme gruvbox-material'
         vim.opt_local.spell = true
         vim.opt_local.tabstop = 4
-        vim.cmd 'colorscheme gruvbox-material'
+        vim.opt_local.textwidth = 80
     end,
 })
 
--- CSV files: turn textwidth off
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'csv', 'csv_comma' },
-    callback = function()
-        vim.opt_local.textwidth = 0
-    end,
-})
+-- -- CSV files: turn textwidth off
+-- vim.api.nvim_create_autocmd('FileType', {
+--     pattern = { 'csv', 'csv_comma' },
+--     callback = function()
+--         vim.opt_local.textwidth = 0
+--     end,
+-- })
 
 ---- Custom colorscheme for .lua files
 --vim.api.nvim_create_autocmd('FileType', {

@@ -63,7 +63,7 @@ local options = {
 
     -- Line wrap
     -- columns = 100,
-    textwidth = 80,
+    -- textwidth = 80,
     linebreak = true,
 
     -- Tab size
