@@ -15,11 +15,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
--- Markdown files: create symmetrical pairs
+-- Markdown files
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'markdown',
     callback = function()
-        vim.opt_local.textwidth = 80
+        -- vim.opt_local.textwidth = 80
         -- MiniPairs.map_buf(0, 'i', '*', { action = 'closeopen', pair = '**' })
         -- MiniPairs.map_buf(0, 'i', '_', { action = 'closeopen', pair = '__' })
     end,
