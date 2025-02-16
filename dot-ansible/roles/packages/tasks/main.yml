@@ -75,6 +75,14 @@
       - neovim
     state: present
 
+- name: Install papis.nvim dependencies - yq and luarocks (dnf)
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - yq
+      - luarocks
+    state: present
+
 - name: Install pandoc (dnf)
   become: true
   ansible.builtin.dnf:
