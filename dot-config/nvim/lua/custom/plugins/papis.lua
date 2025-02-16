@@ -12,9 +12,18 @@ return {
         },
         config = function()
             require('papis').setup {
-                -- Your configuration goes here
+                enable_modules = {
+                    ['debug'] = true,
+                },
                 enable_keymaps = true,
                 init_filetypes = { 'latex', 'tex' },
+                cite_formats = {
+                    tex = {
+                        start_str = [[\autocite{]],
+                        end_str = '}',
+                        separator_str = ', ',
+                    },
+                },
             }
         end,
     },

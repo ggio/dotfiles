@@ -34,9 +34,10 @@ Some added features, plugins and tweaks:
 
 * Made kickstart.nvim **modular**, for readability and maintenance.
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) and [md-to-html](https://github.com/realprogrammersusevim/md-to-html.nvim) for working with md files.
-* [oil.nvim](https://github.com/stevearc/oil.nvim) as a amazing file/directory explorer.
+* [oil.nvim](https://github.com/stevearc/oil.nvim), a amazing file/directory explorer.
 * [rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim) for working with csv files.
 * [VimTex](https://github.com/lervag/vimtex) for LaTeX filetype and syntax.
+* [papis.nvim](https://github.com/jghauser/papis.nvim), a nice interface for `papis`, a CLI and TUI bibliography manager.
 
 # NeoMutt and company
 
