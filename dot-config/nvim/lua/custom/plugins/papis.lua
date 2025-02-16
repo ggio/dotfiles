@@ -1,6 +1,5 @@
 return {
     {
-        enabled = false,
         'jghauser/papis.nvim',
         dependencies = {
             'kkharji/sqlite.lua',
@@ -13,7 +12,9 @@ return {
         },
         config = function()
             require('papis').setup {
-                -- init_filetypes = { 'latex', 'tex', 'plaintex' },
+                -- Your configuration goes here
+                enable_keymaps = true,
+                init_filetypes = { 'latex', 'tex' },
             }
         end,
     },
