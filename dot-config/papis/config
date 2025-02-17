@@ -15,6 +15,7 @@ default-library = Doutorado
 # default-query-string = title:*
 editor = nvim
 header-format-file = ~/.config/papis/header
+file-browser = ranger
 notes-name = notes.md
 opentool = xdg-open
 search-engine = "https://google.com"
