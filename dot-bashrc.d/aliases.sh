@@ -1,9 +1,8 @@
-# Put it in `~/.bashrc.d`
-# To upgrade: `source ~/.bashrc`
-
 # General
 alias cs50='sudo systemctl start docker && code'
-alias docker_start='sudo systemctl start docker'
+alias docker-start='sudo systemctl start docker'
+alias papis-cache='papis cache clear && papis cache update'
+alias papis-bib='rm ~/Dropbox/ACADEMICO/DOUTORADO/BIBLIOGRAFIA/biblio.bib && papis export --all --format bibtex --out ~/Dropbox/ACADEMICO/DOUTORADO/BIBLIOGRAFIA/biblio.bib'
 
 # AMC
 alias amc='sudo x11docker -I --clipboard --backend=docker --nxagent --home --share $HOME amc_dev auto-multiple-choice'
@@ -20,6 +19,6 @@ alias cdsaude='cd ~/Dropbox/UTILIDADES/saude'
 alias cdmmhp='cd ~/Dropbox/ACADEMICO/MMHP/'
 
 # MMHP
-alias mmhp_artigo='cp -a ~/Dropbox/ACADEMICO/MMHP/modelos/artigo/. .'
-alias mmhp_inmemoriam='cp -a ~/Dropbox/ACADEMICO/MMHP/modelos/inmemoriam/. .'
-alias mmhp_pandoc='pandoc texto.docx -o texto.tex'
+alias mmhp-artigo='cp -a ~/Dropbox/ACADEMICO/MMHP/modelos/artigo/. .'
+alias mmhp-inmemoriam='cp -a ~/Dropbox/ACADEMICO/MMHP/modelos/inmemoriam/. .'
+alias mmhp-pandoc='pandoc texto.docx -o texto.tex'
