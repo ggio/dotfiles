@@ -1,6 +1,6 @@
 <ansiwhite> {doc.html_escape[title]}</ansiwhite>
 <ansigreen>    {doc.html_escape[author]}</ansigreen>
-<ansimagenta>    ({doc[year]}) </ansimagenta> <ansiyellow>{doc[project]}</ansiyellow>
+<ansimagenta>    (@{doc[ref]}) </ansimagenta> <ansiyellow>{doc[project]}</ansiyellow>
 <ansigray>    {doc[files]}</ansigray>
 
 

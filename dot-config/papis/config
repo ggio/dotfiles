@@ -11,7 +11,7 @@ add-edit = True
 add-open = False
 citations-file-name = citations.yaml
 database-backend = papis
-default-library = Doutorado
+default-library = doutorado
 # default-query-string = title:*
 editor = nvim
 header-format-file = ~/.config/papis/header
@@ -31,7 +31,7 @@ extra-bibtex-types = ["thesis"]
 # ===== FORMATS ===== #
 
 # Default folder name for newly added documents
-add-folder-name = {doc[author_list][0][family]} ({doc[year]}) - {doc[title]}
+add-folder-name = {doc[author_list][0][family]} ({doc[year]}) - {doc[title]:.30}
 # Default file name
 add-file-name = {doc[author_list][0][family]}{doc[year]}
 match-format = {doc[project]}{doc[title]}{doc[author]}{doc[year]}
@@ -39,10 +39,12 @@ multiple-authors-format = {au[family]}, {au[given]}
 # Change the cite key format (papis "ref")
 ref-format = {doc[author_list][0][family]}{doc[year]}
 
-[Doutorado]
+[doutorado]
 dir = /home/gregorio/Dropbox/ACADEMICO/DOUTORADO/BIBLIOGRAFIA/papis
 
-[Geral]
-dir = ~/Dropbox/BIBLIOGRAFIA
+[geral]
+dir = ~/Dropbox/BIBLIO
 
+[estagios]
+dir = ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/papis
 # vim: ft=ini

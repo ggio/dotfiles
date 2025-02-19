@@ -3,6 +3,8 @@ alias cs50='sudo systemctl start docker && code'
 alias docker-start='sudo systemctl start docker'
 alias papis-cache='papis cache clear && papis cache update'
 alias papis-bib='rm ~/Dropbox/ACADEMICO/DOUTORADO/BIBLIOGRAFIA/biblio.bib && papis export --all --format bibtex --out ~/Dropbox/ACADEMICO/DOUTORADO/BIBLIOGRAFIA/biblio.bib'
+alias papis-cache-geral='papis -l geral cache clear && papis -l geral cache update'
+alias papis-bib-geral='rm ~/Dropbox/BIBLIO/biblio.bib && papis -l geral export --all --format bibtex --out ~/Dropbox/BIBLIO/biblio.bib'
 
 # AMC
 alias amc='sudo x11docker -I --clipboard --backend=docker --nxagent --home --share $HOME amc_dev auto-multiple-choice'
