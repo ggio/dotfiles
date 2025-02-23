@@ -47,4 +47,14 @@ dir = ~/Dropbox/BIBLIO
 
 [estagios]
 dir = ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/papis
+header-format-file = ~/.config/papis/header-estagios
+
+# Formats
+add-folder-name = {doc[abreviacao]}
+add-file-name = {Anexo}
+ref-format = {doc[abreviacao]}
+
+# database-backend = whoosh
+# whoosh-schema-fields = ['author', 'year', 'project', 'title']
+
 # vim: ft=ini

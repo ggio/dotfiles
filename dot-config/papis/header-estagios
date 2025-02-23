@@ -1,0 +1,8 @@
+<ansiwhite> {doc.html_escape[abreviacao]} ({doc[title]})</ansiwhite>
+<ansimagenta>    {doc[situacao]} </ansimagenta> 
+<ansigreen>    {doc.html_escape[responsavel]}</ansigreen>
+<ansiblue>    {doc[local]}</ansiblue>
+<ansigray>    {doc[tags]}</ansigray>
+<ansiwhite> </ansiwhite>
+
+
