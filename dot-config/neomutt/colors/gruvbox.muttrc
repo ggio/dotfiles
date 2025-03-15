@@ -88,7 +88,7 @@ color search        	color235 	color208
 color signature     	color108 	color235
 color status        	color223 	color237
 color tilde         	color243 	color235
-color tree          	color142 	default
+color tree          	color94 	default
 color underline     	color223 	color239
 
 # sidebar ------------ foreground ---- background -----------------------------

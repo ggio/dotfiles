@@ -100,6 +100,7 @@ macro index,pager .I ";<modify-tags>-inbox<enter>"		    "untag as inbox"
 
 # (un)read
 macro index,pager .r ";<modify-tags>-unread<enter>"		    "tag as read"
+macro index,pager .R ";<modify-tags>+unread<enter>"		    "tag as unread"
 
 # todo
 macro index,pager .o ";<modify-tags>+todo<enter>"		    "tag as todo"
