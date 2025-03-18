@@ -11,6 +11,13 @@
       - celluloid
     state: present
 
+- name: Install foliate (dnf) # epub reader
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - foliate
+    state: present
+
 - name: Install gimp (dnf)
   become: true
   ansible.builtin.dnf:
