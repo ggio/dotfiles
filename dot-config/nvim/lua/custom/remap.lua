@@ -91,7 +91,7 @@ vim.keymap.set(
     { desc = 'Move focus to the upper window' }
 )
 
--- Spelling
+-- Spelling suggestions
 vim.keymap.set('n', '<C-s>', function()
     require('telescope.builtin').spell_suggest(
         require('telescope.themes').get_cursor {
