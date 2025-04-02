@@ -2,5 +2,6 @@
 <ansigreen>    {doc.html_escape[author]}</ansigreen>
 <ansimagenta>    (@{doc[ref]}) </ansimagenta> <ansiyellow>{doc[project]}</ansiyellow>
 <ansigray>    {doc[files]}</ansigray>
+<ansicyan>    {doc[notes]}</ansicyan>
 
 
