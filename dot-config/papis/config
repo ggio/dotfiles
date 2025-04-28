@@ -40,7 +40,7 @@ multiple-authors-format = {au[family]}, {au[given]}
 ref-format = {doc[author_list][0][family]}{doc[year]}
 
 [doutorado]
-dir = /home/gregorio/Dropbox/ACADEMICO/DOUTORADO/BIBLIOGRAFIA/papis
+dir = /home/gregorio/Dropbox/ACADEMICO/doutorado/bibliografia/papis
 
 [geral]
 dir = ~/Dropbox/BIBLIO
