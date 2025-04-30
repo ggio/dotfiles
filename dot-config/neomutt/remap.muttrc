@@ -173,6 +173,9 @@ macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 # Sync mailbox based on pressing $
 macro index $ "<shell-escape>~/.config/neomutt/scripts/sync-macro.sh 2>&1<enter>" "Sync email and notmuch"
 
+# Sync and quit
+macro index q "<shell-escape>~/.config/neomutt/scripts/sync-macro.sh 2>&1<enter><exit>" "Sync and quit"
+
 # Run "notmuch new"
 macro index <F1> "<shell-escape>notmuch new<enter>" "Notmuch new"
 
