@@ -8,13 +8,14 @@ alias docker-start='sudo systemctl start docker'
 
 # Directories shortcuts
 alias cd50='cd ~/Dropbox/PROFISSIONAL/TECH/Estudos/CS50/devcontainer/'
+alias cdconfig='cd ~/.config'
 alias cddoc='cd ~/Dropbox/ACADEMICO/doutorado/'
 alias cddocencia='cd ~/Dropbox/PROFISSIONAL/DOCENCIA'
-alias cdconfig='cd ~/.config'
+alias cdestagios='cd ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/2501'
+alias cdmmhp='cd ~/Dropbox/ACADEMICO/mmhp/'
+alias cdsaude='cd ~/Dropbox/UTILIDADES/saude'
 alias cdtech='cd ~/Dropbox/UTILIDADES/tech/linux'
 alias cdutil='cd ~/Dropbox/UTILIDADES/'
-alias cdsaude='cd ~/Dropbox/UTILIDADES/saude'
-alias cdmmhp='cd ~/Dropbox/ACADEMICO/mmhp/'
 
 # Neomutt e afins
 alias proton-reset='rm -r ~/.mail/proton/*'
