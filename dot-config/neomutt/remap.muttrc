@@ -99,8 +99,8 @@ macro index,pager .i ";<modify-tags>+inbox<enter>"		    "tag as inbox"
 macro index,pager .I ";<modify-tags>-inbox<enter>"		    "untag as inbox"
 
 # (un)read
-macro index,pager .r ";<modify-tags>-unread<enter>"		    "tag as read"
-macro index,pager .R ";<modify-tags>+unread<enter>"		    "tag as unread"
+macro index,pager .R ";<modify-labels>+unread<enter>"		    "tag as unread"
+macro index,pager .r ";<modify-labels>-unread<enter>"		    "tag as read"
 
 # todo
 macro index,pager .o ";<modify-tags>+todo<enter>"		    "tag as todo"
