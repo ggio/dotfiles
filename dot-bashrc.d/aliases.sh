@@ -15,6 +15,7 @@ alias cdestagios='cd ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/2501'
 alias cdmmhp='cd ~/Dropbox/ACADEMICO/mmhp/'
 alias cdsaude='cd ~/Dropbox/UTILIDADES/saude'
 alias cdtech='cd ~/Dropbox/UTILIDADES/tech/linux'
+alias cdtese='cd ~/Dropbox/ACADEMICO/doutorado/escritas/qualificacao/teorico'
 alias cdutil='cd ~/Dropbox/UTILIDADES/'
 
 # Neomutt e afins
