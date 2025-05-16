@@ -116,6 +116,7 @@ virtual-mailboxes   "vet"		    "notmuch://?query=tag:vet"
 named-mailboxes	    "  --- lists ---"	    "notmuch://?query=tag:emptylist"
 virtual-mailboxes   "neomutt"	    	    "notmuch://?query=tag:neomutt"
 virtual-mailboxes   "notmuch"	    	    "notmuch://?query=tag:notmuch"
+virtual-mailboxes   "substack"	    	    "notmuch://?query=tag:substack"
 
 named-mailboxes	    "  ---- bin ----"	    "notmuch://?query=tag:emptybin"
 virtual-mailboxes   "junk"	    	    "notmuch://?query=tag:junk"
