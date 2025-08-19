@@ -7,19 +7,23 @@ alias cs50='sudo systemctl start docker && code'
 alias docker-start='sudo systemctl start docker'
 
 # Directories shortcuts
-alias cd50='cd ~/Dropbox/PROFISSIONAL/TECH/Estudos/CS50/devcontainer/'
+
+alias cdads='cd /home/gregorio/Dropbox/ACADEMICO/tech/ads'
+alias cd50='cd /home/gregorio/Dropbox/ACADEMICO/tech/CS50'
+alias cdclinica='cd ~/Dropbox/PROFISSIONAL/CLINICA'
 alias cdconfig='cd ~/.config'
 alias cddoc='cd ~/Dropbox/ACADEMICO/doutorado/'
 alias cddocencia='cd ~/Dropbox/PROFISSIONAL/DOCENCIA'
-alias cdestagios='cd ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/2501'
+alias cdestagios='cd ~/Dropbox/PROFISSIONAL/DOCENCIA/Estagios/gestao/2501'
 alias cdmmhp='cd ~/Dropbox/ACADEMICO/mmhp/'
+alias cdplano='cd ~/Dropbox/UTILIDADES/planejamento/'
 alias cdsaude='cd ~/Dropbox/UTILIDADES/saude'
 alias cdtech='cd ~/Dropbox/UTILIDADES/tech/linux'
 alias cdtese='cd ~/Dropbox/ACADEMICO/doutorado/escritas/qualificacao/teorico'
 alias cdutil='cd ~/Dropbox/UTILIDADES/'
 
 # Neomutt e afins
-alias proton-reset='rm -r ~/.mail/proton/*'
+alias proton-nuke='rm -r ~/.mail/proton/*'
 
 # MMHP
 alias mmhp-artigo='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .'

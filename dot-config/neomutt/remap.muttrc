@@ -59,7 +59,7 @@ bind index,pager    B		sidebar-toggle-visible
 
 # Folders handling
 
-macro index,pager	ga	"<change-folder>Archive<enter>"		"go to [a]rchive"
+macro index,pager	ga	"<change-folder>ads<enter>"		"go to [a]ds"
 macro index,pager	gc	"<change-folder>contas<enter>"		"go to [c]ontas"
 macro index,pager	gC	"<change-folder>compras<enter>"		"go to [C]compras"
 macro index,pager	gd	"<change-folder>drafts<enter>"		"go to [d]rafts"

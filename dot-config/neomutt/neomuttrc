@@ -104,6 +104,7 @@ virtual-mailboxes   "flagged"    	    "notmuch://?query=tag:flagged"
 virtual-mailboxes   "sent"	    	    "notmuch://?query=tag:sent"
 
 named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag"
+virtual-mailboxes   "ads"		    "notmuch://?query=tag:ads"
 virtual-mailboxes   "contas"		    "notmuch://?query=tag:contas"
 virtual-mailboxes   "mmhp"	    	    "notmuch://?query=tag:mmhp"
 virtual-mailboxes   "unipac"	    	    "notmuch://?query=tag:unipac"
