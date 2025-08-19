@@ -44,6 +44,7 @@ dir = /home/gregorio/Dropbox/ACADEMICO/doutorado/bibliografia/papis
 
 [geral]
 dir = ~/Dropbox/BIBLIO
+header-format-file = ~/.config/papis/header-geral
 
 [estagios]
 dir = ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/papis
