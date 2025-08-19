@@ -47,8 +47,9 @@ dir = ~/Dropbox/BIBLIO
 header-format-file = ~/.config/papis/header-geral
 
 [estagios]
-dir = ~/Dropbox/PROFISSIONAL/DOCENCIA/3._Estagios/gestao/papis
+dir = ~/Dropbox/PROFISSIONAL/DOCENCIA/Estagios/gestao/papis
 header-format-file = ~/.config/papis/header-estagios
+database-backend = papis
 
 # Formats
 add-folder-name = {doc[abreviacao]}
