@@ -1,7 +1,8 @@
-<ansiwhite> {doc.html_escape[title]}</ansiwhite>
+<ansiwhite> {doc.html_escape[title]}</ansiwhite><ansigray> {doc.html_escape[subtitle]}</ansigray>
 <ansigreen>    {doc.html_escape[author]}</ansigreen>
 <ansimagenta>    (@{doc[ref]}) </ansimagenta> <ansiyellow>{doc[project]}</ansiyellow>
 <ansigray>    {doc[files]}</ansigray>
+<ansiyellow>    tags: {doc[tags]}</ansiyellow>
 <ansicyan>    {doc[notes]}</ansicyan>
 
 
