@@ -4,8 +4,8 @@ return {
         'neovim/nvim-lspconfig',
         dependencies = {
             -- Automatically install LSPs and related tools to stdpath for Neovim
-            { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-            'williamboman/mason-lspconfig.nvim',
+            { 'williamboman/mason.nvim', version = 'v1.*', config = true }, -- NOTE: Must be loaded before dependants
+            { 'williamboman/mason-lspconfig.nvim', version = 'v1.*' },
             'WhoIsSethDaniel/mason-tool-installer.nvim',
 
             -- Useful status updates for LSP.
@@ -15,6 +15,7 @@ return {
             -- Allows extra capabilities provided by nvim-cmp
             'hrsh7th/cmp-nvim-lsp',
         },
+
         config = function()
             -- Brief aside: **What is LSP?**
             --
@@ -234,18 +235,42 @@ return {
             --  - settings (table): Override the default settings passed when initializing the server.
             --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
             local servers = {
-                -- clangd = {},
-                -- gopls = {},
-                pyright = {},
-                -- rust_analyzer = {},
-                -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+
+                -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
                 --
                 -- Some languages (like typescript) have entire language plugins that can be useful:
                 --    https://github.com/pmizio/typescript-tools.nvim
                 --
                 -- But for many setups, the LSP (`ts_ls`) will work just fine
                 -- ts_ls = {},
-                --
+
+                emmet_language_server = {
+                    filetypes = {
+                        'html',
+                        'css',
+                        'scss',
+                        'sass',
+                        'less',
+                        'javascript',
+                        'javascriptreact',
+                        'typescript',
+                        'typescriptreact',
+                        'vue',
+                        'svelte',
+                        'php',
+                    },
+                    settings = {
+                        emmet = {
+                            showExpandedAbbreviation = 'always',
+                            showAbbreviationSuggestions = true,
+                        },
+                    },
+                },
+
+                pyright = {},
+
+                -- html = {},
+
                 ltex = {
                     filetypes = { 'latex', 'plaintex', 'tex' },
                     settings = {
