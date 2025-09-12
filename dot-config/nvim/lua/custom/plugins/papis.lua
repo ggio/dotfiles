@@ -12,9 +12,9 @@ return {
         },
         config = function()
             require('papis').setup {
-                enable_modules = {
-                    ['debug'] = true,
-                },
+                -- ['debug'] = {
+                --     enable = true,
+                -- },
                 enable_keymaps = true,
                 init_filetypes = { 'latex', 'tex' },
                 cite_formats = {
