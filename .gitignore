@@ -1,3 +1,4 @@
 /dot-config/neomutt/~
 /dot-local/share/fonts/FiraCode/.uuid
 /dot-config/ranger/colorschemes/__pycache__
+/dot-config/nvim/lazy-lock.json
