@@ -11,10 +11,10 @@ vim.g.have_nerd_font = true
 
 ------------ MODULES ------------
 
--- Lazy and plugins
+-- lazy.nvim and plugins
 require 'custom.lazy'
 
--- Minhas configurações
+-- Auto commands
 require 'custom.autocmd'
 
 -- Options
