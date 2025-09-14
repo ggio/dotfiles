@@ -8,15 +8,15 @@ return {
             },
         },
 
-        init = function()
-            local cmp = require 'cmp'
-            cmp.setup.filetype('tex', {
-                sources = {
-                    { name = 'vimtex' },
-                    { name = 'buffer' },
-                    -- other sources
-                },
-            })
-        end,
+        -- init = function()
+        --     local cmp = require 'cmp'
+        --     cmp.setup.filetype('tex', {
+        --         sources = {
+        --             { name = 'vimtex' },
+        --             { name = 'buffer' },
+        --             -- other sources
+        --         },
+        --     })
+        -- end,
     },
 }

@@ -9,14 +9,10 @@ return {
         -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
         ---@module 'render-markdown'
         ---@type render.md.UserConfig
-        opts = {},
-        init = function()
-            local cmp = require 'cmp'
-            cmp.setup {
-                sources = cmp.config.sources {
-                    { name = 'render-markdown' },
-                },
-            }
-        end,
+        opts = {
+            completions = {
+                lsp = { enabled = true },
+            },
+        },
     },
 }
