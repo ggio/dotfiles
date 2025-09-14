@@ -89,7 +89,18 @@ return {
             },
 
             sources = {
-                default = { 'lsp', 'path', 'snippets', 'lazydev', 'vimtex' },
+                default = {
+                    'lsp',
+                    'path',
+                    'snippets',
+                    'lazydev',
+                    'vimtex',
+                },
+
+                -- papis integration for tags completion on info.yml
+                per_filetype = {
+                    yaml = { 'papis' },
+                },
 
                 providers = {
 
