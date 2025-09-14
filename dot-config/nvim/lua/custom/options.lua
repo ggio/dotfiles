@@ -73,6 +73,14 @@ local options = {
     softtabstop = 4,
     shiftwidth = 4,
 
+    -- Another indent options to tweak, if nedded
+    -- cmd to know how nvim is calculating the indenting: `:set indentexpr?`
+    -- also, see indent settings and exceptions in the treesiter setup.
+
+    -- expandtab = true,
+    -- autoindent = true,
+    -- smarttab = true,
+
     ------------ EDIT ------------
 
     -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
