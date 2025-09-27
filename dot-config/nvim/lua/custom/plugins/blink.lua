@@ -77,6 +77,11 @@ return {
 
                 -- Restore <C-k> to insert digraphs
                 ['<C-k>'] = false,
+
+                -- Disable up and down arrows
+                ['<Up>'] = false,
+                ['<Down>'] = false,
+                ['<CR>'] = false,
             },
 
             appearance = {
