@@ -8,7 +8,7 @@ alias docker-start='sudo systemctl start docker'
 
 # Directories shortcuts
 
-alias cdads='cd /home/gregorio/Dropbox/ACADEMICO/tech/ads'
+alias cdads='cd /home/gregorio/Dropbox/ACADEMICO/tech/cursos/ads'
 alias cd50='cd /home/gregorio/Dropbox/ACADEMICO/tech/CS50'
 alias cdclinica='cd ~/Dropbox/PROFISSIONAL/CLINICA'
 alias cdconfig='cd ~/.config'
@@ -18,7 +18,7 @@ alias cdestagios='cd ~/Dropbox/PROFISSIONAL/DOCENCIA/Estagios/gestao/2501'
 alias cdmmhp='cd ~/Dropbox/ACADEMICO/mmhp/'
 alias cdplano='cd ~/Dropbox/UTILIDADES/planejamento/'
 alias cdsaude='cd ~/Dropbox/UTILIDADES/saude'
-alias cdtech='cd ~/Dropbox/UTILIDADES/tech/linux'
+alias cdtech='cd ~/Dropbox/ACADEMICO/tech/'
 alias cdtese='cd ~/Dropbox/ACADEMICO/doutorado/escritas/qualificacao/teorico'
 alias cdutil='cd ~/Dropbox/UTILIDADES/'
 
