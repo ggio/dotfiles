@@ -35,3 +35,5 @@ alias mmhp-pandoc='pandoc texto.docx -o texto.tex'
 alias papis-bib='rm ~/Dropbox/ACADEMICO/doutorado/bibliografia/biblio.bib && papis export --all --format bibtex --out ~/Dropbox/ACADEMICO/doutorado/bibliografia/biblio.bib'
 alias papis-bib-geral='rm ~/Dropbox/BIBLIO/biblio.bib && papis -l geral export --all --format bibtex --out ~/Dropbox/BIBLIO/biblio.bib'
 
+# Others
+alias http-nocache='http-server -c-1 -a localhost -p 8000'

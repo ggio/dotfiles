@@ -315,6 +315,15 @@ return {
 
                 -- html = {},
 
+                -- javascript
+                vtsls = {},
+                -- prettierd = {
+                --     filetypes = { 'javascript' },
+                -- },
+                -- prettier = {
+                --     filetypes = { 'javascript' },
+                -- },
+
                 ltex = {
                     filetypes = { 'latex', 'plaintex', 'tex' },
                     settings = {

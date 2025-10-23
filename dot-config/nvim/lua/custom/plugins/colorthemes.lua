@@ -12,9 +12,19 @@ return {
             -- Functions non bold
             vim.g.gruvbox_baby_function_style = 'NONE'
 
+            vim.g.gruvbox_baby_highlights = {
+                Underlined = {
+                    -- cterm = 'underline',
+                    -- gui = 'underline',
+                    -- guifg = '#cc241d',
+                    fg = '#fb4934',
+                    bg = 'NONE',
+                    style = 'NONE',
+                },
+            }
+
             -- Enable telescope theme
             -- vim.g.gruvbox_baby_telescope_theme = 1
-
             vim.cmd.colorscheme 'gruvbox-baby'
             -- You can configure highlights by doing something like:
             -- vim.cmd.hi 'Comment gui=none'

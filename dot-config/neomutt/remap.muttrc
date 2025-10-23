@@ -139,7 +139,7 @@ macro index,pager .V ";<modify-tags>-vet<enter>"		    "untag as unipac"
 # BIN
 # trash
 macro index,pager .d ";<modify-tags>+deleted -inbox -unread<enter>"	"tag as deleted"
-macro index,pager .u ";<modify-tags>-deleted +inbox<enter>"		"untag as deleted"
+macro index,pager .D ";<modify-tags>-deleted +inbox<enter>"		"untag as deleted"
 
 # junk
 macro index,pager .j ";<modify-tags>+junk -inbox -unread<enter>"    "tag as junk"
