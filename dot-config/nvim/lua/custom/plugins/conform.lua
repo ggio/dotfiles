@@ -37,31 +37,25 @@ return {
         end,
         formatters_by_ft = {
             lua = { 'stylua' },
-            html = {
-                -- 'prettierd',
-                'prettier',
-                -- 'superhtml',
-                stop_after_first = true,
-            },
-            -- Conform can also run multiple formatters sequentially
-            -- python = { "isort", "black" },
-            --
+            html = { 'prettierd', 'prettier' },
+            css = { 'prettierd', 'prettier' },
+
             -- You can use 'stop_after_first' to run the first available formatter from the list
             javascript = {
-                -- 'prettierd',
+                'prettierd',
                 'prettier',
                 stop_after_first = true,
             },
         },
-        formatters = {
-            prettier = {
-                prepend_args = function()
-                    return {
-                        '--tab-width',
-                        '4',
-                    }
-                end,
-            },
-        },
+        -- formatters = {
+        --     prettier = {
+        --         prepend_args = function()
+        --             return {
+        --                 '--tab-width',
+        --                 '4',
+        --             }
+        --         end,
+        --     },
+        -- },
     },
 }
