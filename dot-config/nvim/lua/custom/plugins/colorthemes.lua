@@ -5,6 +5,17 @@ return {
     { 'luisiacc/gruvbox-baby', name = 'gruvbox-baby', priority = 1000 },
     { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
     {
+        'xeind/nightingale.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require('nightingale').setup {
+                transparent = true,
+            }
+            -- vim.cmd("colorscheme nightingale")
+        end,
+    },
+    {
         'ayu-theme/ayu-vim',
         name = 'ayu',
         priority = 1000,
