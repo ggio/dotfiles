@@ -288,6 +288,10 @@ return {
                 -- But for many setups, the LSP (`ts_ls`) will work just fine
                 -- ts_ls = {},
 
+                -- C# (temporary, plan to move to roslyn.nvim when I migrate to nvim 0.11)
+                -- roslyn_ls = {},
+
+                -- front-end
                 emmet_language_server = {
                     filetypes = {
                         'html',
@@ -311,18 +315,13 @@ return {
                     },
                 },
 
+                -- python
                 pyright = {},
 
                 -- html = {},
 
                 -- javascript
                 vtsls = {},
-                -- prettierd = {
-                --     filetypes = { 'javascript' },
-                -- },
-                -- prettier = {
-                --     filetypes = { 'javascript' },
-                -- },
 
                 ltex = {
                     filetypes = { 'latex', 'plaintex', 'tex' },
@@ -369,6 +368,11 @@ return {
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
                 'stylua', -- Used to format Lua code
+                'prettier',
+                'prettierd',
+                'markdownlint',
+                'eslint_d',
+                'csharpier', -- C# formater
             })
             require('mason-tool-installer').setup {
                 ensure_installed = ensure_installed,
