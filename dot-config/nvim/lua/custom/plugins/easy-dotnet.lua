@@ -1,4 +1,7 @@
--- lazy.nvim
+-- on Fedora:
+-- sudo dnf install dotnet-sdk-9.0
+-- dotnet tool install -g EasyDotnet
+
 return {
     'GustavEikaas/easy-dotnet.nvim',
     -- 'nvim-telescope/telescope.nvim' or 'ibhagwan/fzf-lua' or 'folke/snacks.nvim'
