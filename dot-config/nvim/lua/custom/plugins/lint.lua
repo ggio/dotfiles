@@ -10,7 +10,7 @@ return {
         local lint = require 'lint'
         -- Set wich linter to run
         lint.linters_by_ft = {
-            markdown = { 'markdownlint' },
+            -- markdown = { 'markdownlint' },
             -- Run :MasonInstall eslint_d to install the eslint daemon package
             -- See instructions for eslint: https://eslint.org/docs/latest/use/getting-started
             -- In the project root: `npm install eslint_d`

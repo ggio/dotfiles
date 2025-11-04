@@ -4,6 +4,7 @@ return {
     { 'morhetz/gruvbox', name = 'gruvbox', priority = 1000 },
     { 'luisiacc/gruvbox-baby', name = 'gruvbox-baby', priority = 1000 },
     { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+    { 'savq/melange-nvim', name = 'melange', priority = 1000 },
     {
         'xeind/nightingale.nvim',
         lazy = false,
