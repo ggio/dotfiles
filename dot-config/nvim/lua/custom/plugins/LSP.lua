@@ -318,6 +318,10 @@ return {
                 -- python
                 pyright = {},
 
+                -- php
+                phpactor = {},
+                intelephense = {},
+
                 -- html = {},
 
                 -- javascript
@@ -373,6 +377,12 @@ return {
                 'markdownlint',
                 'eslint_d',
                 'csharpier', -- C# formater
+                'php-cs-fixer', -- php formatter
+                'pint', -- php formatter
+                'shellcheck', -- shell linter
+                'sqlfluff', -- sql linter
+                'markuplint', -- html linter
+                'phpcs', -- php linter
             })
             require('mason-tool-installer').setup {
                 ensure_installed = ensure_installed,

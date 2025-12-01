@@ -17,6 +17,11 @@ return {
             -- Then, create a cofig file: `npm init @eslint/config@latest`
             javascript = { 'eslint_d' },
             typescript = { 'eslint_d' },
+            sh = { 'shellcheck' },
+            sql = { 'sqlfluff' },
+            html = { 'markuplint' },
+            -- php = { 'phpcs' },
+            -- phtml = { 'phpcs' },
 
             -- Set when to run it (on save and when stop typing)
             vim.api.nvim_create_autocmd({ 'InsertLeave', 'BufWritePost' }, {

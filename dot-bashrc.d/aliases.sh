@@ -40,5 +40,8 @@ alias papis-bib='rm ~/Dropbox/ACADEMICO/doutorado/bibliografia/biblio.bib && pap
 alias papis-bib-geral='rm ~/Dropbox/BIBLIO/biblio.bib && papis -l geral export --all --format bibtex --out ~/Dropbox/BIBLIO/biblio.bib'
 
 # Others
-alias http-nocache='http-server -c-1 -a localhost -p 8000'
 alias rgr='ranger'
+
+# Dev
+alias http-nocache='http-server -c-1 -a localhost -p 8000'
+alias php-server='sudo php --server localhost:8080 --docroot  .'

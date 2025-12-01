@@ -40,6 +40,8 @@ return {
             html = { 'prettierd', 'prettier' },
             css = { 'prettierd', 'prettier' },
             cs = { 'csharpier' },
+            php = { 'php_cs_fixer' }, -- pint
+            phtml = { 'php_cs_fixer' },
 
             -- You can use 'stop_after_first' to run the first available formatter from the list
             javascript = {
