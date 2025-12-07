@@ -23,8 +23,12 @@
 # TODO:
   # multimedia reunited
   # keyboard shortkeys
-  # docker
   # amc
-  # vscode
-  # - nvidia                    # Install nvidia drivers | Can break things
+  # nvidia                    # Install nvidia drivers | Can break things
+  # dev
+  #   docker
+  #   php
+  #   c# (mono, mcs, dotnet, plugins nvim: csharpier, )
+  #   vscode
+  #   ghostty
 
