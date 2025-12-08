@@ -63,7 +63,7 @@ cursor-opacity = 0.75
 
 window-save-state = always
 
-term = xterm-256color
+# term = xterm-256color
 
 # Keybindings
 
@@ -78,7 +78,7 @@ keybind = ctrl+shift+j=new_split:down
 keybind = ctrl+shift+l=new_split:right
 
 # Close splits
-keybind = alt+q=close_surface
+keybind = ctrl+shift+q=close_surface
 
 
 
