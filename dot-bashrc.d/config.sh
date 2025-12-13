@@ -14,4 +14,4 @@ white=$(tput setaf 7)
 user_color=$blue
 
 # Prompt color
-PS1="[\[$green\]\u@\h \[$blue\]\W\[$white\]]\$ "
+PS1="[\[$yellow\]\u@\h \[$green\]\W\[$white\]]\$ "

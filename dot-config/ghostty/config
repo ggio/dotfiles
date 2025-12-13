@@ -24,21 +24,17 @@ cursor-color = #D8D6D1
 cursor-text = #002121
 cursor-opacity = 0.75
 
-# Keybindings
-
-# Go to splits
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:bottom
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+l=goto_split:right
+# ======= Keybindings ======= #
 
 # New splits
 keybind = ctrl+shift+j=new_split:down
 keybind = ctrl+shift+l=new_split:right
 
+# Go to splits
+keybind = ctrl+alt+h=goto_split:left
+keybind = ctrl+alt+j=goto_split:bottom
+keybind = ctrl+alt+k=goto_split:top
+keybind = ctrl+alt+l=goto_split:right
+
 # Close splits
 keybind = ctrl+q=close_surface
-
-
-
-
