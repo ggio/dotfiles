@@ -7,8 +7,12 @@ mkcd () {
 }
 
 # Move artigo para /publicados
-mmhp-publicado () {
-    mv "$1" ../publicados/
+mmhp-publish () {
+    if mv "$1" ../publicados/; then
+	echo "[ok] artigo movido para ../publicados/"
+    else
+	echo "[erro] o script falhou"
+    fi
 }
 
 # Converte texto.docx e o move para os módulos da publicação
