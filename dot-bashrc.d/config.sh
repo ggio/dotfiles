@@ -17,7 +17,7 @@ gray=$(tput setaf 7)
 
 # My colors
 dir=$(tput setaf 65)
-user=$(tput setaf 178)
+user=$(tput setaf 3)
 
 # 65 - cyan muted
 # 136 - yellow darker
