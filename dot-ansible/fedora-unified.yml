@@ -25,6 +25,7 @@
   # keyboard shortkeys
   # amc
   # nvidia                    # Install nvidia drivers | Can break things
+  # librewolf
   # dev
   #   docker
   #   php
