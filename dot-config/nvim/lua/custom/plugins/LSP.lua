@@ -396,6 +396,7 @@ return {
             'sqlfluff', -- sql linter
             'markuplint', -- html linter
             'phpcs', -- php linter
+            'beautysh', -- bash formatter
         })
         require('mason-tool-installer').setup {
             ensure_installed = ensure_installed,
