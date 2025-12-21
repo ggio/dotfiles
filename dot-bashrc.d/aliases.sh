@@ -33,9 +33,9 @@ alias cdutil='cd ~/Dropbox/UTILIDADES'
 alias proton-nuke='rm -r ~/.mail/proton/*'
 
 # MMHP
-alias mmhp-artigo='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .'
-alias mmhp-dossie='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/dossie/. .'
-alias mmhp-inmemoriam='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/inmemoriam/. .'
+# alias mmhp-artigo='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .'
+# alias mmhp-dossie='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/dossie/. .'
+# alias mmhp-inmemoriam='cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/inmemoriam/. .'
 
 # Papis
 alias papis-bib='rm ~/Dropbox/ACADEMICO/doutorado/bibliografia/biblio.bib && papis export --all --format bibtex --out ~/Dropbox/ACADEMICO/doutorado/bibliografia/biblio.bib'

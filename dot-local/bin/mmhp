@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+
+# Parâmetros
+CMD=$1
+PAR1=$2
+PAR2=$3
+
+# =============== FUNÇÕES AUXILIARES =============== #
+
+# Conversão do texto com pandoc
+convertTexto () {
+    pandocStatus=1
+    mvStatus=1
+
+    # Checa se algum argumento foi dado
+    if [  -z $PAR1 ]; then
+        echo "Converter o quê, véi?"
+        exit 1
+    fi
+
+    # Checa se arquivo existe
+    if [ ! -f $PAR1 ]; then
+        echo "[Erro] Arquivo '$PAR1' não existe."
+        exit 1
+    fi
+
+    # Converte e move o arquivo .tex
+    echo "Running \`pandoc "$PAR1" -o texto.tex\`"
+    pandoc "$PAR1" -o texto.tex || pandocStatus=0
+    echo "Running \`mv texto.tex ../modulos/\`"
+    mv texto.tex ../modulos/ || mvStatus=0
+
+    # Printa resultado
+    if [ $pandocStatus =  1 ] && [ $mvStatus = 1 ]; then
+        echo "[OK] texto.tex adicionado aos módulos da publicação."
+    else
+        echo ""
+        echo "[Erro] O script falhou."
+    fi
+}
+
+# Copia modelo para pasta atual
+iniciarModelo () {
+    case $PAR1 in
+        "artigo")
+            echo "Running \`cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .\`"
+            cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .
+            echo "[OK] Modelo de artigo criado."
+            ;;
+        "dossie")
+            echo "Running \`cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/dossie/. .\`"
+            cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/dossie/. .
+            echo "[OK] Modelo de dossiê criado."
+            ;;
+        "inmemoriam")
+            echo "Running \`cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/inmemoriam/. .\`"
+            cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/inmemoriam/. .
+            echo "[OK] Modelo de in memoriam criado."
+            ;;
+        *)
+            echo "Iniciar o quê, cara?"
+            echo "As opções são 'artigo', 'dossie' e 'inmemoriam'."
+    esac
+}
+
+# Move pasta para /publicados
+publicar () {
+    # Checa se argumento foi passado
+    if [ -z $PAR1 ]; then
+        echo "Publicar o quê, fiote?"
+        exit 1
+    fi
+
+    # Move a pasta e printa resultado
+    if mv "$PAR1" ../publicados/; then
+        echo "Running \`mv "$PAR1" ../publicados/\`"
+        echo "[OK] Publicação movida para ../publicados/"
+    else
+        echo "[ERRO] O script falhou."
+    fi
+}
+
+# =============== COMANDOS PRINCIPAIS =============== #
+
+# Checa se algum comando foi informado
+if [ -z $CMD ]; then
+    echo "Você precisa informar um comando, cara."
+    echo "Digite \`mmhp help\` para obter ajuda."
+    exit 1
+fi
+
+# Trata comandos
+case $CMD in
+    "publish")
+        publicar
+        ;;
+
+    "init")
+        iniciarModelo
+        ;;
+
+    "pandoc")
+        convertTexto
+        ;;
+
+    "help")
+        echo "Comandos disponíveis:"
+        echo -e '    init [modelo]'
+        echo -e '    publish [pasta]'
+        echo -e '    pandoc [arquivo.docx]'
+        ;;
+
+    *)
+        echo "Comando não encontrado."
+        echo "Digite \`mmhp help\` para obter ajuda."
+        ;;
+esac
+
+# vim:ft=bash
