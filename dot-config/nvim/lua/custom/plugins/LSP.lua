@@ -384,19 +384,20 @@ return {
         -- for you, so that they are available from within Neovim.
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {
-            'stylua', -- Used to format Lua code
+            'beautysh', -- bash formatter
+            'csharpier', -- C# formater
+            'eslint_d',
+            'markdownlint',
+            'markuplint', -- html linter
+            'php-cs-fixer', -- php formatter
+            'phpcs', -- php linter
+            'pint', -- php formatter
             'prettier',
             'prettierd',
-            'markdownlint',
-            'eslint_d',
-            'csharpier', -- C# formater
-            'php-cs-fixer', -- php formatter
-            'pint', -- php formatter
             'shellcheck', -- shell linter
             'sqlfluff', -- sql linter
-            'markuplint', -- html linter
-            'phpcs', -- php linter
-            'beautysh', -- bash formatter
+            'stylua', -- Used to format Lua code
+            'tex-fmt', -- latex formatter
         })
         require('mason-tool-installer').setup {
             ensure_installed = ensure_installed,

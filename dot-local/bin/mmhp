@@ -4,6 +4,7 @@
 CMD=$1
 PAR1=$2
 PAR2=$3
+tab="    "
 
 # =============== FUNÇÕES AUXILIARES =============== #
 
@@ -20,22 +21,25 @@ convertTexto () {
 
     # Checa se arquivo existe
     if [ ! -f $PAR1 ]; then
-        echo "[Erro] Arquivo '$PAR1' não existe."
+        echo "erro: o arquivo '$PAR1' não existe."
         exit 1
     fi
 
     # Converte e move o arquivo .tex
+    # echo "Convertendo para .tex"
     echo "Running \`pandoc "$PAR1" -o texto.tex\`"
     pandoc "$PAR1" -o texto.tex || pandocStatus=0
+
+    # echo "Movendo texto.tex para /modulos"
     echo "Running \`mv texto.tex ../modulos/\`"
     mv texto.tex ../modulos/ || mvStatus=0
 
     # Printa resultado
     if [ $pandocStatus =  1 ] && [ $mvStatus = 1 ]; then
-        echo "[OK] texto.tex adicionado aos módulos da publicação."
+        echo "[ok] texto.tex adicionado aos módulos da publicação."
     else
         echo ""
-        echo "[Erro] O script falhou."
+        echo "erro: o script falhou."
     fi
 }
 
@@ -45,17 +49,17 @@ iniciarModelo () {
         "artigo")
             echo "Running \`cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .\`"
             cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/artigo/. .
-            echo "[OK] Modelo de artigo criado."
+            echo "[ok] modelo de artigo criado."
             ;;
         "dossie")
             echo "Running \`cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/dossie/. .\`"
             cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/dossie/. .
-            echo "[OK] Modelo de dossiê criado."
+            echo "[ok] modelo de dossiê criado."
             ;;
         "inmemoriam")
             echo "Running \`cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/inmemoriam/. .\`"
             cp -a ~/Dropbox/ACADEMICO/mmhp/modelos/inmemoriam/. .
-            echo "[OK] Modelo de in memoriam criado."
+            echo "[ok] modelo de in memoriam criado."
             ;;
         *)
             echo "Iniciar o quê, cara?"
@@ -74,9 +78,9 @@ publicar () {
     # Move a pasta e printa resultado
     if mv "$PAR1" ../publicados/; then
         echo "Running \`mv "$PAR1" ../publicados/\`"
-        echo "[OK] Publicação movida para ../publicados/"
+        echo "[ok] publicação movida para ../publicados/"
     else
-        echo "[ERRO] O script falhou."
+        echo "erro: o script falhou."
     fi
 }
 
@@ -111,7 +115,7 @@ case $CMD in
         ;;
 
     *)
-        echo "Comando não encontrado."
+        echo "mmhp: '$CMD' não é um comando mmhp."
         echo "Digite \`mmhp help\` para obter ajuda."
         ;;
 esac

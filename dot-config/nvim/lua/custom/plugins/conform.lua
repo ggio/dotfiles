@@ -43,6 +43,7 @@ return {
             php = { 'php_cs_fixer' }, -- pint
             phtml = { 'php_cs_fixer' },
             bash = { 'beautysh' },
+			tex = { 'tex-fmt' },
 
             -- You can use 'stop_after_first' to run the first available formatter from the list
             javascript = {
