@@ -12,10 +12,10 @@ source		    ~/.config/neomutt/colors/gruvbox.muttrc
 
 # ===== Paths ===== #
 
-set folder = ~/.mail/mailbox
+set folder = ~/.mail/proton
 set tmp_dir = "~/.mail/.tmp"
 set nm_default_url = "notmuch:///home/gregorio/.mail/"	# Notmuch folder
-# Other paths to consider: isync
+# Other paths to consider: isync, notmuch
 
 set mailcap_path =  ~/.config/neomutt/mailcap		# Handle different filetypes
 set postponed = "+Drafts"
@@ -45,8 +45,8 @@ set forward_format = "Fwd: %s"	# Format of subject when forwarding
 set forward_quote		# Include message in forwards
 set reverse_name		# Reply as whomever it was to
 set include			# Include message in replies
-set mail_check = 60		# To avoid lags using IMAP with some email providers
-set date_format = "%d/%m/%y %I:%M%p"		# Show date in day/month/year hour:minute format
+set mail_check=60		# To avoid lags using IMAP with some email providers
+set date_format="%d/%m/%y %I:%M%p"		# Show date in day/month/year hour:minute format
 # set sort_aux = reverse-last-date-received	# Sort threads by last date recieved - newest first
 
 set abort_noattach = ask-yes					# Ask if sended without attachment
@@ -61,6 +61,7 @@ set nm_record_tags = "sent"
 set nm_unread_tag = "unread"
 set nm_exclude_tags = "deleted,junk,spam"
 # set sendmail="/PATH/TO/bin/nm_sendmail"         # enables parsing of outgoing mail
+
 
 set hidden_tags = "flagged,passed,replied,attachment,signed,encrypted"
 # Default hidden tags:
@@ -123,3 +124,19 @@ virtual-mailboxes   "junk"	    	    "notmuch://?query=tag:junk"
 virtual-mailboxes   "spam"	    	    "notmuch://?query=tag:spam"
 virtual-mailboxes   "trash"	    	    "notmuch://?query=tag:deleted"
 
+# named-mailboxes	    "  ---------------"	    "notmuch://?query=tag:empty5"
+# named-mailboxes	    "  --- folders ---"	    "notmuch://?query=tag:empty1"
+# mailboxes	    +INBOX 
+# mailboxes	    +Archive 
+# mailboxes	    +Labels.To-Do 
+# mailboxes	    -label drafty +Drafts 
+# mailboxes	    +Sent 
+# mailboxes	    +Spam 
+# mailboxes 	    +Starred 
+# mailboxes	    -label Trashy +Trash 
+# named-mailboxes	    "  ---- tags ----"	    "notmuch://?query=tag:emptytag1"
+# mailboxes	    +Labels.Contas 
+# mailboxes	    +Labels.Unipac 
+# named-mailboxes	    "  --- listas ---"	    "notmuch://?query=tag:list1"
+# mailboxes	    +Folders.Listas.neomutt
+# mailboxes	    +Folders.Listas.notmuch

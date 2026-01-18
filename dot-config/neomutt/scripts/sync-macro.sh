@@ -6,9 +6,9 @@ echo "Sync Macro"
 echo "=========="
 echo ""
 
-echo "Running 'msbsync proton'"
+echo "Running 'msbsync mailbox'"
 echo "------------------------"
-mbsync proton
+mbsync mailbox
 
 echo ""
 echo "Running 'notmuch new'"
