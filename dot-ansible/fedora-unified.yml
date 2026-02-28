@@ -26,6 +26,7 @@
   # amc
   # nvidia                    # Install nvidia drivers | Can break things
   # librewolf
+  # sxiv (imgs)
   # dev
   #   docker
   #   php
